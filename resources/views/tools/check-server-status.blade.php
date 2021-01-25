@@ -46,13 +46,17 @@ Check Server Status
                                         @endforeach
                                     </ul>
 
+                                    @elseif(session('success'))
+                                        <div class="alert alert-success">
+                                            {{ session('success')}}
+                                        </div>
+
+
                                 </div>
                                     @else
                                     <div class="blog-post-info">
-                                             <h4 class="post-name">Enter a domain here to check whether it is down or not...</h4>
-                  
-                                    
-                                </div>
+                                        <h4 class="post-name">Enter a domain here to check whether it is down or not...</h4>
+                                    </div>
 
                                     @endif
                                 </div> 
