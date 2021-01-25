@@ -91,7 +91,7 @@
             </div>
         </header>
         <!-- /header -->
-        @include('includes.messages')
+        
        @yield('main-content')
       
 		<!-- Footer-->

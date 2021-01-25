@@ -38,10 +38,25 @@ Check Server Status
                         <div class="blog-post-container blog-page">
                             <div class="blog-post-single blog-post-item">
                                 <div class="blog-post-info">
+                                    @if($errors->any())
+                                    <div class="aler alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                        <li>{{$error}}</li>
+                                        @endforeach
+                                    </ul>
+
+                                </div>
+                                    @else
+                                    <div class="blog-post-info">
                                              <h4 class="post-name">Enter a domain here to check whether it is down or not...</h4>
                   
-									
+                                    
                                 </div>
+
+                                    @endif
+                                </div> 
+                                
 	
                                 <div class="post-reply">
                                       
@@ -52,7 +67,7 @@ Check Server Status
                                                
                                                     <div class="row">
                                                         <div class="col-md-6 col-xs-12">
-                                                            <input name="domain" type="text" placeholder="mysite.com" id="myInput" class="form-control">
+                                                            <input name="domain" type="text" placeholder="http://mysite.com or https://mysite.com" id="myInput" class="form-control">
                                                         </div>
                                                         <div class="col-md-6 col-xs-12">
                                                           
