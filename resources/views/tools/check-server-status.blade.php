@@ -214,8 +214,11 @@ Check Server Status
 						 <aside class="widget widget_category">
                             <h3 class="widget-title">Latest Sites Checked</h3>
                             <ul>
-								
-								<li><a href="#">Po</li>'
+                                
+								@foreach($data as $element)
+								<li><a href="{{$element->domains}}">{{ $element->domains }}</li>
+                                    @endforeach
+                                   
 		
 	  
 					
@@ -232,17 +235,17 @@ Check Server Status
                          <aside class="widget widget_category">
                             <h3 class="widget-title">Tags</h3>
                             <ul>
-                                <li><a href="https://toolsforcopywriter.com/check-server-status">is this site down</a></li>
-                                <li><a href="https://toolsforcopywriter.com/check-server-status">website down</a></li>
-                                <li><a href="https://toolsforcopywriter.com/check-server-status">is this website down</a></li>
-                                <li><a href="https://toolsforcopywriter.com/check-server-status">is it down right now</a></li>
-                                <li><a href="https://toolsforcopywriter.com/check-server-status">server status</a></li>
+                                <li><a href="{{route('check-server-status')}}">is this site down</a></li>
+                                <li><a href="{{route('check-server-status')}}}">website down</a></li>
+                                <li><a href="{{route('check-server-status')}}">is this website down</a></li>
+                                <li><a href="{{route('check-server-status')}}">is it down right now</a></li>
+                                <li><a href="{{route('check-server-status')}}">server status</a></li>
 
-                                <li><a href="https://toolsforcopywriter.com/check-server-status">is the website down</a></li>
-                                <li><a href="https://toolsforcopywriter.com/check-server-status">check server status</a></li>
-                                <li><a href="https://toolsforcopywriter.com/check-server-status">check server status online</a></li>
-                                <li><a href="https://toolsforcopywriter.com/check-server-status">check server status by link online</a></li>
-                                <li><a href="https://toolsforcopywriter.com/check-server-status">check server status of a website</a></li>
+                                <li><a href="{{route('check-server-status')}}">is the website down</a></li>
+                                <li><a href="{{route('check-server-status')}}">check server status</a></li>
+                                <li><a href="{{route('check-server-status')}}">check server status online</a></li>
+                                <li><a href="{{route('check-server-status')}}">check server status by link online</a></li>
+                                <li><a href="{{route('check-server-status')}}">check server status of a website</a></li>
                             </ul>
                         </aside>
                        

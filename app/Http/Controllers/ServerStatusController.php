@@ -15,6 +15,21 @@ class ServerStatusController extends Controller
 	protected static $server_response;
 
 
+
+
+	public function firstUpload()
+	{
+		$data = Domains::orderBy('id', 'desc')->take(5)->get();
+
+		//dd($data);
+		//$data = Domains::find(4);
+		//$getdomain= $data->domains;
+		//echo $getdomain;
+
+		return view('tools/check-server-status', ['data'=>$data ]);
+	}
+
+
   public function submit(CheckUrlRequest $request)
 {
 
@@ -30,7 +45,8 @@ class ServerStatusController extends Controller
 
 
 
-   return redirect()->route('check-server-status', ['domain' => $urls->domains, 'server_request' => $urls-> server_request, 'server_response' => self::requestValidation(self::$server_response) ]);
+   return redirect()->route('check-server-status', ['domain' => $urls->domains, 'server_request' => $urls-> server_request, 'server_response' => self::requestValidation(self::$server_response)]);
+   //->with('success', 'There is updated message u see');
 }
 
 
