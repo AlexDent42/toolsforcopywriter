@@ -8,13 +8,92 @@ use App\Models\Domains;
 
 class ServerStatusController extends Controller
 {
+
+
+	protected $domains;
+	protected $server_request;
+	protected static $server_response;
+
+
   public function submit(CheckUrlRequest $request)
 {
+
+
+
+							
   $urls = new Domains();
   $urls-> domains = $request->input('domain');
-  $urls-> server_request = 200;
+  $urls-> server_request = self::curlRequest($request);
+
+ 
   $urls->save();
 
-  return redirect()->route('index'); 
+
+
+   return redirect()->route('check-server-status', ['domain' => $urls->domains, 'server_request' => $urls-> server_request, 'server_response' => self::requestValidation(self::$server_response) ]);
 }
+
+
+
+
+public static function curlRequest($request)
+{
+
+								
+										$domain = $request->input('domain');
+									//Get server answer into $out variable
+									  if($curl = curl_init())
+									  {
+										    curl_setopt($curl,CURLOPT_URL, $domain);
+										    curl_setopt($curl,CURLOPT_RETURNTRANSFER,true);
+										    curl_setopt($curl,CURLOPT_NOBODY,true);
+										    curl_setopt($curl,CURLOPT_HEADER,true);
+										    $out = curl_exec($curl);		
+											 curl_close($curl);
+  										}
+
+								
+
+								     
+								     if(!empty($out))
+								     	{
+								     		$arr = explode(' ',$out);
+									 $serverResponse = $arr[1];
+									 self:: $server_response =$serverResponse;
+									
+									return $serverResponse;
+										}
+
+										else 
+											{
+												$serverResponse = 0;
+												self:: $server_response = $serverResponse;
+												
+												return $serverResponse;
+											}
+
+
+
+}
+
+
+public static function requestValidation($serverResponse)
+{
+	if($serverResponse<399 && $serverResponse!=0)
+	{
+		return 'Be happy:)Server isnt down';
+	}
+	if($serverResponse>=400)
+	{
+		return 'OMG! Server is currently down:(';
+	}
+	if($serverResponse=0)
+		return 'Are you sure you did everything right?';
+	else
+		return 'Are you sure you did everything right?';
+					
+										
+}
+
+
 }

@@ -38,27 +38,22 @@ Check Server Status
                         <div class="blog-post-container blog-page">
                             <div class="blog-post-single blog-post-item">
                                 <div class="blog-post-info">
-                                    @if($errors->any())
-                                    <div class="aler alert-danger">
-                                    <ul>
-                                        @foreach ($errors->all() as $error)
-                                        <li>{{$error}}</li>
-                                        @endforeach
-                                    </ul>
-
-                                    @elseif(session('success'))
-                                        <div class="alert alert-success">
-                                            {{ session('success')}}
-                                        </div>
+                                  @include('includes.messages')
 
 
-                                </div>
-                                    @else
+                                @if(request()->has('domain'))
+                                 <div class="blog-post-info">
+                                        <h4 class="post-name">{{request('server_response')}}</h4>
+                                    </div>
+
+                                @else
+                                    
                                     <div class="blog-post-info">
                                         <h4 class="post-name">Enter a domain here to check whether it is down or not...</h4>
                                     </div>
-
                                     @endif
+
+                                    
                                 </div> 
                                 
 	
@@ -113,7 +108,7 @@ Check Server Status
                                                
                                             </div>
                                             
-                                            
+                                                @if(request()->has('domain'))
                                            
                                               <div class="row">
                                                 <div class="col-xs-12 col-sm-6 col-md-6">
@@ -121,7 +116,7 @@ Check Server Status
                                                         
                                                         <div class="blog-post-info v2">
                                                             
-                                                            <h4 class="post-name">answer</h4>
+                                                            <h4 class="post-name">{{ request('domain') }}</h4>
                                                             
                                                            
                                                         </div>
@@ -129,15 +124,16 @@ Check Server Status
                                                 </div>
                                                 <div class="col-xs-12 col-sm-6 col-md-6">
                                                     <div class="blog-post-item post-item">
+                                                         <div class="blog-post-info v2">
+                                                          <h4 class="post-name">@if(request('server_request')!=0)HTTP code {{ request('server_request') }}@endif</h4>
+                                                            </div>
                                                         
-                                                        <div class="blog-post-info v2">
-                                                           
-                                                               <h4 class="post-name">serverAnswer</h4>
-                                                           
-                                                        </div>
+                                                        
                                                     </div>
                                                 </div>
-                                            </div>
+                                                </div>
+                                            @endif
+
                                             
                                             
                                         </div>
