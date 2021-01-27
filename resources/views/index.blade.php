@@ -18,7 +18,7 @@ Online Tools for Copywriter
 @endsection
 
 @section('current-url')
-/index
+{{route('index')}}
 @endsection
 
 

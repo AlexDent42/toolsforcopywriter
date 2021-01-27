@@ -27,5 +27,5 @@ Route::post('/check-server-status/check', 'ServerStatusController@submit')->name
 Route::post('/email-subscribe', 'EmailsubscribeController@subscribe')->name('email-subscribe');
 
 
-
+Route::post('word-counter/calc', 'WordCounterController@calculate')->name('word-counter-calc');
 

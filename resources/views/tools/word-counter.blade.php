@@ -3,23 +3,23 @@
 
 
 @section('title')
-'Online Tools for Copywriters| ToolsForCopywriter.com',
+Free Word Counter - Count Words &amp; Correct Writing| ToolsforCopywriter.com
 @endsection
 
 @section('description')
-Must To Have Tools For Copywriters and SEO Managers In Growing Company. Add these free tools into your tool kit⭐ToolsForCopywriter.com
+Copy and paste your text into the online editor to count its words and characters and check keyword density ⭐Free Word Counter - Count Words &amp; Correct Writing
 @endsection
 
 @section('keywords')
-tools for copywriter, online tools for copywriter
+word counter, word count, character count
 @endsection
 
 @section('main-title')
-Online Tools for Copywriter
+Free Word Counter
 @endsection
 
 @section('current-url')
-/index
+{{route('word-counter')}}
 @endsection
 
 
@@ -38,122 +38,79 @@ Online Tools for Copywriter
                     <div class="main-content col-xs-12 col-md-8">
                         <div class="blog-post-container blog-page">
                             <div class="blog-post-single blog-post-item">
+                                @if(session()->has('words'))
                                 <div class="blog-post-info">
-									
-	
 
-                                    
-                                    <h3 class="post-name ver2">--  Words-- Characters -- Without White Spaces</h3>
+                                    <h3 class="post-name ver2">{{ session('words')  }}  Words {{ session('characters') }} Characters {{ session('withoutspaces') }} Without White Spaces</h3>
 									
-										<h4 class="post-name ver2">Reading Time -  min. </h4>
-										
-										
-									
-									    <h4 class="post-name ver2">Speaking Time - ' min.</h4>
+										<h4 class="post-name ver2">Reading Time -  {{ session('readingtime') }} min. </h4>
+									    <h4 class="post-name ver2">Speaking Time - {{ session('speakingtime') }} min.</h4>
 									
                                 </div>
+                                @endif
 
 
-                                <div class="post-reply">
-                                        <h3 class="post-title widget-title">Keyword Density</h3>
-									 <div class="row">
-										 
-										
-										
-													
-                                                    <div class="col-md-6 col-xs-12">
-														
-                                                        <label><i>Enter text to display keywords</i></label>
-                                                       
-                                                    </div>
-										 <div class="col-md-6 col-xs-12">
-														
-                                                        <label><i></i></label>
-                                                       
-                                                    </div>
-										
+                                            <div class="post-reply">
 
-										 
-										 
-										   <div class="col-md-6 col-xs-12">
-														
-                                                        <label><i>key;?</i></label>
-                                                       
-                                                    </div>
-                                                    <div class="col-md-6 col-xs-12">
-                                                        <label>perc.'%'</label>
-                                                       
-                                                    </div>
-								
-								
-								
-								
-										 <div class="col-md-6 col-xs-12">
-														
-                                                        <label><i>Other</i></label>
-                                                       
-                                                    </div>
-                                                    <div class="col-md-6 col-xs-12">
-                                                        <label> round($other, 1).'%';?></label>
-                                                       
-                                                    </div>
-										 
-										 
-									
-										 
-										 
-										 
-										 
-										  
-                                          </div>
-									
-									
-									
-                                        <form action="#" class="comment-form" method="post">
-                                            <div class="form-group">
-                                                <div class="row">
-													
-                                                    <div class="col-md-6 col-xs-12">
-														
+                                        @if(session()->has('smth'))
+                									 <div class="row">
+                                                         <div class="col-md-6 col-xs-12">
+                                                             <h3 class="post-title widget-title"> Keyword Density</h3>         
+                                                         </div>
+
+                						
+                										 <div class="col-md-6 col-xs-12">
                                                         
-                                                       
+                                                             <label><i></i></label>
+                                                                       
+                                                         </div>
+                										
+
+                										 
+                										 
+                										   <div class="col-md-6 col-xs-12">
+                														
+                                                                        <label><i>key;?</i></label>
+                                                                       
+                                                            </div>
+                                                            <div class="col-md-6 col-xs-12">
+                                                                <label>perc.'%'</label>
+                                                                       
+                                                            </div>
+                								
+                								
+                								
+                								
+                										 <div class="col-md-6 col-xs-12">
+                														
+                                                                <label><i>Other</i></label>
+                                                                       
+                                                         </div>
+                                                         <div class="col-md-6 col-xs-12">
+                                                                <label> round($other, 1).'%';?></label>
+                                                                       
+                                                        </div>
+                				
                                                     </div>
-                                                    <div class="col-md-6 col-xs-12">
-                                                     
-                                                       
-                                                    </div>
-									
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                       
-                                                        <textarea name="note" id="message" tabindex="2" class="form-control" placeholder="Start typing, or copy and paste your document here..."></textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <button type="submit" class="btn btn-submit">Count</button>
-                                        </form>
+                                                       @endif
+                									
+        									
+        									 @include('includes.messages')
+                                                <form action="{{route('word-counter-calc')}}" class="comment-form" method="post">
+                                                    @csrf
+                                                        
+                                                        <div class="form-group">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                   
+                                                                    <textarea name="text" id="message" tabindex="2" class="form-control" placeholder="Start typing, or copy and paste your document here..."></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <button type="submit" class="btn btn-submit">Count</button>
+                                                </form>
                                     </div>
 
-
-
-								
-								
-								
-								
-								
-								
-								
-								
-								
-								
-								
-								
-								
-								
-								
 
                                 <div class="post-metas ver2">
                                     
@@ -202,29 +159,23 @@ Online Tools for Copywriter
                         
                         
                         
-                        <aside class="widget widget_newletters">
-                            <h3 class="widget-title">Newsletters</h3>
-                            <div class="newletter-form">
-                                <form action="#">
-                                    <input type="text" name="s" placeholder="Your email address..." class="form-control">
-                                    <button type="submit" class="btn btn-submit">Submit</button>
-                                </form>
-                            </div>
-                        </aside>
+                       @include('includes/aside-email')
+
+
                          <aside class="widget widget_category">
                             <h3 class="widget-title">Tags</h3>
                             <ul>
-                                <li><a href="https://toolsforcopywriter.com/word-counter">character counter</a></li>
-                                <li><a href="https://toolsforcopywriter.com/word-counter">how many words</a></li>
-                                <li><a href="https://toolsforcopywriter.com/word-counter">word counter tool</a></li>
-                                <li><a href="https://toolsforcopywriter.com/word-counter">count characters</a></li>
-                                <li><a href="https://toolsforcopywriter.com/word-counter">word counter online</a></li>
+                                <li><a href="{{route('word-counter')}}">character counter</a></li>
+                                <li><a href="{{route('word-counter')}}">how many words</a></li>
+                                <li><a href="{{route('word-counter')}}">word counter tool</a></li>
+                                <li><a href="{{route('word-counter')}}">count characters</a></li>
+                                <li><a href="{{route('word-counter')}}">word counter online</a></li>
 
-                                <li><a href="https://toolsforcopywriter.com/word-counter">online character counter</a></li>
-                                <li><a href="https://toolsforcopywriter.com/word-counter">character count online</a></li>
-                                <li><a href="https://toolsforcopywriter.com/word-counter">characters count</a></li>
-                                <li><a href="https://toolsforcopywriter.com/word-counter">count my words</a></li>
-                                <li><a href="https://toolsforcopywriter.com/word-counter">word couter</a></li>
+                                <li><a href="{{route('word-counter')}}">online character counter</a></li>
+                                <li><a href="{{route('word-counter')}}">character count online</a></li>
+                                <li><a href="{{route('word-counter')}}">characters count</a></li>
+                                <li><a href="{{route('word-counter')}}">count my words</a></li>
+                                <li><a href="{{route('word-counter')}}">word couter</a></li>
                             </ul>
                         </aside>
                        
@@ -233,6 +184,8 @@ Online Tools for Copywriter
                 </div>
             </div>
         </div>
-
+        @php
+            session()->forget(['words', 'characters', 'withoutspaces' , 'readingtime' , 'speakingtime']);
+        @endphp
 
 @endsection

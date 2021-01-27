@@ -287,14 +287,7 @@ Online Password Generator
                         
                         
                         
-                        <aside class="widget widget_newletters">
-                            <h3 class="widget-title">Newsletters</h3>
-                            <div class="newletter-form">
-                                <form action="#">
-                                    <input type="text" name="s" placeholder="Your email address..." class="form-control">
-                                    <button type="submit" class="btn btn-submit">Submit</button>
-                                </form>
-                            </div>
+                        @include('includes/aside-email')
                         </aside>
                          <aside class="widget widget_category">
                             <h3 class="widget-title">Tags</h3>
