@@ -13,8 +13,10 @@
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                         <div class="newletter-form">
                             <h3 class="footer-title text-center">Newsletter</h3>
-                            <form action="#">
-                                <input type="text" name="s" placeholder="Email Adress..." class="form-control">
+                             @include('includes.messages')
+                            <form action="{{route('email-subscribe')}}" method="post">
+                                @csrf
+                                <input type="text" name="email" placeholder="Email Adress..." class="form-control">
                                 <button type="submit" class="btn btn-submit">
                                     <i class="fa fa-angle-right"></i>
                                 </button>

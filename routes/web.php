@@ -20,19 +20,11 @@ Route::get('/passwords-generator', function () {
 
 Route::post('/passwords-generator/generate', 'PassgenController@generate')->name('passgenerate');
 
-
-
-//Route::get('/check-server-status', 'ServerStatusController@firstUpload');->name('check-server-status');
 Route::get('/check-server-status', 'ServerStatusController@firstUpload')->name('check-server-status');
-   // return view('tools/check-server-status');
-//})
-
-//->name('check-server-status');
-
-
-//Route::get('/contact/all', 'ContactController@allData')->name('contact-data');
 
 Route::post('/check-server-status/check', 'ServerStatusController@submit')->name('server-status');
+
+Route::post('/email-subscribe', 'EmailsubscribeController@subscribe')->name('email-subscribe');
 
 
 
