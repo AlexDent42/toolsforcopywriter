@@ -21,10 +21,6 @@ class ServerStatusController extends Controller
 	{
 		$data = Domains::orderBy('id', 'desc')->take(5)->get();
 
-		//dd($data);
-		//$data = Domains::find(4);
-		//$getdomain= $data->domains;
-		//echo $getdomain;
 
 		return view('tools/check-server-status', ['data'=>$data ]);
 	}
@@ -32,20 +28,17 @@ class ServerStatusController extends Controller
 
   public function submit(CheckUrlRequest $request)
 {
-
-
-
-							
+						
   $urls = new Domains();
   $urls-> domains = $request->input('domain');
   $urls-> server_request = self::curlRequest($request);
-
- 
   $urls->save();
 
+  $cut_domain = substr($urls->domains, 0, 30);
 
 
-   return redirect()->route('check-server-status', ['domain' => $urls->domains, 'server_request' => $urls-> server_request, 'server_response' => self::requestValidation(self::$server_response)]);
+
+   return redirect()->route('check-server-status', ['domain' => $cut_domain, 'server_request' => $urls-> server_request, 'server_response' => self::requestValidation(self::$server_response)]);
    //->with('success', 'There is updated message u see');
 }
 
@@ -56,37 +49,37 @@ public static function curlRequest($request)
 {
 
 								
-										$domain = $request->input('domain');
-									//Get server answer into $out variable
-									  if($curl = curl_init())
-									  {
-										    curl_setopt($curl,CURLOPT_URL, $domain);
-										    curl_setopt($curl,CURLOPT_RETURNTRANSFER,true);
-										    curl_setopt($curl,CURLOPT_NOBODY,true);
-										    curl_setopt($curl,CURLOPT_HEADER,true);
-										    $out = curl_exec($curl);		
-											 curl_close($curl);
-  										}
+	$domain = $request->input('domain');
+//Get server answer into $out variable
+  if($curl = curl_init())
+  {
+	    curl_setopt($curl,CURLOPT_URL, $domain);
+	    curl_setopt($curl,CURLOPT_RETURNTRANSFER,true);
+	    curl_setopt($curl,CURLOPT_NOBODY,true);
+	    curl_setopt($curl,CURLOPT_HEADER,true);
+	    $out = curl_exec($curl);		
+		 curl_close($curl);
+		}
 
-								
 
-								     
-								     if(!empty($out))
-								     	{
-								     		$arr = explode(' ',$out);
-									 $serverResponse = $arr[1];
-									 self:: $server_response =$serverResponse;
-									
-									return $serverResponse;
-										}
 
-										else 
-											{
-												$serverResponse = 0;
-												self:: $server_response = $serverResponse;
-												
-												return $serverResponse;
-											}
+ 
+ if(!empty($out))
+ 		{
+		 $arr = explode(' ',$out);
+		 $serverResponse = $arr[1];
+		 self:: $server_response =$serverResponse;
+
+	return $serverResponse;
+		}
+
+	else 
+		{
+			$serverResponse = 0;
+			self:: $server_response = $serverResponse;
+			
+			return $serverResponse;
+		}
 
 
 

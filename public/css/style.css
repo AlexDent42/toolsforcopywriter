@@ -2990,7 +2990,7 @@ select[multiple].input-lg,
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
   .btn:hover, .btn:focus, .btn.focus {
-    color: #333;
+    color: #000;
     text-decoration: none; }
   .btn:active, .btn.active {
     outline: 0;
@@ -6722,22 +6722,22 @@ body {
 
 @media (max-width: 1024px) {
   .main-content {
-    margin-bottom: 30px; } }
+    margin-bottom: 10px; } }
 
 @media (min-width: 1025px) {
   .blog-post-item {
-    margin-bottom: 51px; }
+    margin-bottom: 5px; }
     .blog-post-item.item-grid {
-      margin-bottom: 56px; } }
+      margin-bottom: 5px; } }
 @media (max-width: 768px) {
   .blog-post-item {
-    margin-bottom: 30px; } }
+    margin-bottom: 10px; } }
 .blog-post-item .blog-post-info {
   margin-top: 25px; }
   .blog-post-item .blog-post-info.space-v1 {
     padding: 30px 30px 20px 30px; }
   .blog-post-item .blog-post-info.space-v2 {
-    margin-top: 34px; }
+    margin-top: 14px; }
 .blog-post-item .post-date {
   font-weight: 600;
   font-size: 13px;
@@ -6745,9 +6745,9 @@ body {
   .blog-post-item .post-date.v2 {
     font-weight: 500; }
 .blog-post-item .post-name {
-  margin-bottom: 30px; }
+  margin-bottom: 10px; }
   .blog-post-item .post-name.ver2 {
-    margin-bottom: 40px; }
+    margin-bottom: 10px; }
   .blog-post-item .post-name a {
     font-size: 20px;
     text-transform: capitalize; }
@@ -7259,10 +7259,10 @@ body {
     float: none;
     margin: 0 auto;
     display: block;
-    background: #000;
+    background: #e91d63;
     color: #fff; }
     .comment-form .btn-submit.ver2:hover {
-      background: #eb5050;
+      background: #e91d63;
       color: #fff; }
   .comment-form .btn-submit.ver3 {
     background: #000;
@@ -10462,7 +10462,7 @@ span.star:before {
     line-height: 54px;
     text-align: center;
     color: #fff;
-    background: #000;
+    background: #e91d63;
     font-size: 16px;
     font-weight: 500;
     display: inline-block;

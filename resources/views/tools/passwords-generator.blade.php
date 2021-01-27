@@ -3,23 +3,23 @@
 
 
 @section('title')
-'Online Tools for Copywriters| ToolsForCopywriter.com',
+Online Password Generator - Create random passwords in a click| ToolsForCopywriter.com
 @endsection
 
 @section('description')
-Must To Have Tools For Copywriters and SEO Managers In Growing Company. Add these free tools into your tool kit⭐ToolsForCopywriter.com
+Create a secure password using our generator tool. Mix letters, numbers and symbols for the ultimate in security. ⭐Free Online Password Generator
 @endsection
 
 @section('keywords')
-tools for copywriter, online tools for copywriter
+Online Password Generator
 @endsection
 
 @section('main-title')
-Online Tools for Copywriter
+Online Password Generator
 @endsection
 
 @section('current-url')
-/index
+{{route('passwords-generator')}}
 @endsection
 
 
@@ -52,8 +52,8 @@ Online Tools for Copywriter
                                                 <div class="row">
                                                     <div class="col-md-6 col-xs-12">
                                                        
-                                                        <input type="text" id="myInput" class="form-control" value="Your new password will appear here.">
-                                                    </div>
+                                                        <input type="text" id="myInput" class="form-control" value="{{session('password')}}" placeholder="Your new password will appear here.">
+                                                        </div>
                                                     <div class="col-md-6 col-xs-12">
                                                         <script>
                                                         function myFunction() {
@@ -87,12 +87,13 @@ Online Tools for Copywriter
                                 
                                 <div class="post-related">
                                        
-                                        <div class="post-related-slide">
-                                            <form action="" method="post">
+                                    <div class="post-related-slide">
+                                        <form action="{{route('passgenerate')}}" method="post">
+                                            @csrf
                                             
                                             
                                             
-                                             <div class="row">
+                                            <div class="row">
                                                 <div class="col-xs-12 col-sm-6 col-md-6">
                                                     <div class="blog-post-item post-item">
                                                         
@@ -109,21 +110,21 @@ Online Tools for Copywriter
                                                         <div class="blog-post-info v2">
                                                            
                                                             <select name="passLength">
-                                            <option value="6" selected>6</option>
-                                            <option value="8">8</option>
-                                              <option value="10">10</option>
-                                                <option value="12">12</option>
-                                                  <option value="14">14</option>
-                                                    <option value="16">16</option>
-                                                      <option value="32">32</option>
-                                                        <option value="64">64</option>
-                                        </select>
+                                                                <option value="6">6</option>
+                                                                <option value="8">8</option>
+                                                                  <option value="10" selected>10</option>
+                                                                    <option value="12">12</option>
+                                                                      <option value="14">14</option>
+                                                                        <option value="16">16</option>
+                                                                          <option value="32">32</option>
+                                                                            <option value="64">64</option>
+                                                            </select>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
 
-                                     <div class="row">
+                                            <div class="row">
                                                 <div class="col-xs-12 col-sm-6 col-md-6">
                                                     <div class="blog-post-item post-item">
                                                         
@@ -145,11 +146,8 @@ Online Tools for Copywriter
                                                     </div>
                                                 </div>
                                             </div>
-                                            
-                                            
-                                            
-                                            
-                                              <div class="row">
+          
+                                            <div class="row">
                                                 <div class="col-xs-12 col-sm-6 col-md-6">
                                                     <div class="blog-post-item post-item">
                                                         
@@ -172,7 +170,7 @@ Online Tools for Copywriter
                                                 </div>
                                             </div>
                                             
-                                             <div class="row">
+                                            <div class="row">
                                                 <div class="col-xs-12 col-sm-6 col-md-6">
                                                     <div class="blog-post-item post-item">
                                                         
@@ -195,7 +193,7 @@ Online Tools for Copywriter
                                                 </div>
                                             </div>
                                             
-                                              <div class="row">
+                                            <div class="row">
                                                 <div class="col-xs-12 col-sm-6 col-md-6">
                                                     <div class="blog-post-item post-item">
                                                         
@@ -218,67 +216,24 @@ Online Tools for Copywriter
                                                     </div>
                                                 </div>
                                             </div>
-                                            
-                                            
-                                            
-                                            
-                                            
+
                                             <div class="row">
-                                               
-                                               
+  
                                             </div>
-                                            
-                                            
-                                            
-                                        </div>
-                                    </div>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-
-
-                                <div class="post-reply">
+     
+                                            </div>
+                                            </div>
+   
+                                            <div class="post-reply">
                                        
-									 <div class="row">
-									 	
-                                                
-								
-									
-										 
-										 
-										 
-										  
-                                          </div>
-									
-									
-									
-                                        
-                                            
-                                           
+									        <div class="row">
+
+                                            </div>
+				
                                             <button type="submit" class="btn btn-submit">Generate</button>
                                         </form>
                                     </div>
 
-
-
-								
-								
-								
-								
-								
-								
-								
-								
-								
-								
-								
-								
-								
-								
-								
 
                                 <div class="post-metas ver2">
                                     
@@ -344,17 +299,17 @@ Online Tools for Copywriter
                          <aside class="widget widget_category">
                             <h3 class="widget-title">Tags</h3>
                             <ul>
-                                <li><a href="https://toolsforcopywriter.com/passwords-generator">random password generator</a></li>
-                                <li><a href="https://toolsforcopywriter.com/passwords-generator">strong password generator</a></li>
-                                <li><a href="https://toolsforcopywriter.com/passwords-generator">online password generator</a></li>
-                                <li><a href="https://toolsforcopywriter.com/passwords-generator">easy password generator</a></li>
-                                <li><a href="https://toolsforcopywriter.com/passwords-generator">free password generator</a></li>
+                                <li><a href="{{route('passwords-generator')}}">random password generator</a></li>
+                                <li><a href="{{route('passwords-generator')}}">strong password generator</a></li>
+                                <li><a href="{{route('passwords-generator')}}">online password generator</a></li>
+                                <li><a href="{{route('passwords-generator')}}">easy password generator</a></li>
+                                <li><a href="{{route('passwords-generator')}}">free password generator</a></li>
 
-                                <li><a href="https://toolsforcopywriter.com/passwords-generator">generator password</a></li>
-                                <li><a href="https://toolsforcopywriter.com/passwords-generator">simple password generator</a></li>
-                                <li><a href="https://toolsforcopywriter.com/passwords-generator">password generator online</a></li>
-                                <li><a href="https://toolsforcopywriter.com/passwords-generator">one time password generator</a></li>
-                                <li><a href="https://toolsforcopywriter.com/passwords-generator">6 digit password generator</a></li>
+                                <li><a href="{{route('passwords-generator')}}">generator password</a></li>
+                                <li><a href="{{route('passwords-generator')}}">simple password generator</a></li>
+                                <li><a href="{{route('passwords-generator')}}">password generator online</a></li>
+                                <li><a href="{{route('passwords-generator')}}">one time password generator</a></li>
+                                <li><a href="{{route('passwords-generator')}}">6 digit password generator</a></li>
                             </ul>
                         </aside>
                        

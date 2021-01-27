@@ -18,6 +18,10 @@ Route::get('/passwords-generator', function () {
 })->name('passwords-generator');
 
 
+Route::post('/passwords-generator/generate', 'PassgenController@generate')->name('passgenerate');
+
+
+
 //Route::get('/check-server-status', 'ServerStatusController@firstUpload');->name('check-server-status');
 Route::get('/check-server-status', 'ServerStatusController@firstUpload')->name('check-server-status');
    // return view('tools/check-server-status');
