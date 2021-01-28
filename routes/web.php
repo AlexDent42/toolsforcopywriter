@@ -37,5 +37,5 @@ Route::post('/online-md5-generator/generate', 'Md5generatorController@generate')
 
 Route::get('/change-text-case', function(){return view('tools/change-text-case');})->name('text-case');
 
-Route::post('/change-text-case/change', 'Md5generatorController@generate')->name('text-case-change');
+Route::post('/change-text-case/change', 'ChangetextcaseController@change')->name('text-case-change');
 

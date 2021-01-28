@@ -38,76 +38,77 @@ Change Text Case
                     <div class="main-content col-xs-12 col-md-8">
                         <div class="blog-post-container blog-page">
                             <div class="blog-post-single blog-post-item">
-                                @if(session()->has('words'))
+                               
                                 <div class="blog-post-info">
 
-                                    <h3 class="post-name ver2">{{ session()->pull('words')  }}  Words {{ session('characters') }} Characters {{ session('withoutspaces') }} Without White Spaces</h3>
-									
-										<h4 class="post-name ver2">Reading Time -  {{ session('readingtime') }} min. </h4>
-									    <h4 class="post-name ver2">Speaking Time - {{ session('speakingtime') }} min.</h4>
-									
+                                 
+
                                 </div>
-                                @endif
+
+        
+
+                                          
+                        
 
 
                                             <div class="post-reply">
 
-                                        @if(session()->has('smth'))
-                									 <div class="row">
-                                                         <div class="col-md-6 col-xs-12">
-                                                             <h3 class="post-title widget-title"> Keyword Density</h3>         
-                                                         </div>
 
-                						
-                										 <div class="col-md-6 col-xs-12">
-                                                        
-                                                             <label><i></i></label>
-                                                                       
-                                                         </div>
-                										
 
-                										 
-                										 
-                										   <div class="col-md-6 col-xs-12">
-                														
-                                                                        <label><i>key;?</i></label>
-                                                                       
-                                                            </div>
-                                                            <div class="col-md-6 col-xs-12">
-                                                                <label>perc.'%'</label>
-                                                                       
-                                                            </div>
-                								
-                								
-                								
-                								
-                										 <div class="col-md-6 col-xs-12">
-                														
-                                                                <label><i>Other</i></label>
-                                                                       
-                                                         </div>
-                                                         <div class="col-md-6 col-xs-12">
-                                                                <label> round($other, 1).'%';?></label>
-                                                                       
-                                                        </div>
-                				
-                                                    </div>
-                                                       @endif
                 									
         									
         									 @include('includes.messages')
-                                                <form action="{{route('word-counter-calc')}}" class="comment-form" method="post">
+                                                <form action="{{route('text-case-change')}}" class="comment-form" method="post">
                                                     @csrf
-                                                        
+
+                                               
                                                         <div class="form-group">
                                                             <div class="row">
+                                                                <div class="col-xs-12 col-sm-6 col-md-6">
+                                                    <div class="blog-post-item post-item">
+                                                        
+                                                        <div class="blog-post-info v2">
+
+                                                             <h4 class="post-name">UPPER CASE</h4>  
+                                                                 <input type="radio" name="text-value" value="upper-case" checked>
+                                                                   <h4 class="post-name">lower case</h4>
+                                                             <input type="radio" name="text-value" value="lower-case">
+                                                            
+                                                           
+                                                          
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-6 col-md-6">
+                                                    <div class="blog-post-item post-item">
+                                                        
+                                                        <div class="blog-post-info v2">
+                                                           
+                                                                <h4 class="post-name">Capitalize Word</h4>
+                                                             <input type="radio" name="text-value" value="capitalize-word">
+                                                              <h4 class="post-name">aLtErNaTe case</h4>
+                                                             <input type="radio" name="text-value" value="alternate-case">
+                                                           
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                             
+                                               
                                                                 <div class="col-md-12">
                                                                    
-                                                                    <textarea name="text" id="message" tabindex="2" class="form-control" placeholder="Start typing, or copy and paste your document here..."></textarea>
+                                                                    <textarea name="text" id="message" tabindex="2" class="form-control" placeholder="Start typing, or copy and paste your document here...">{{ session()->pull('result')  }} </textarea>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <button type="submit" class="btn btn-submit">Count</button>
+
+
+
+
+
+
+
+
+                                                        <button type="submit" class="btn btn-submit">Change</button>
                                                 </form>
                                     </div>
 
@@ -117,14 +118,14 @@ Change Text Case
                                 </div>
                                  <div class="blog-post-info">
                                     
-                                    <h3 class="post-name ver2">What is WordCounter?</h3>
+                                    <h3 class="post-name ver2">Change Text Case Tool</h3>
                                 </div>
                                 <div class="post-content">
                                     <div class="row">
                                         
                                     </div>
                                     <div class="post-text">
-                                    	<p>Word Counter is an easy to use and free online tool for counting words, characters in real time. Count words, check grammar and improve your writing. Get started by typing directly into the text area above or pasting in your content from elsewhere. </p>
+                                    	<p>An important tool which allows you to effortlessly change any text to lower case, UPPER CASE or even Capitalize Each Word, which is great for titles. </p>
 
                                        
                                   
@@ -132,20 +133,19 @@ Change Text Case
                                     </div>
                                     <div class="blog-post-info">
                                     
-                                    <h3 class="post-name ver2">Why would you need an online word counter?</h3>
+                                    <h3 class="post-name ver2">Easy to use Change Text Case Tool</h3>
                                 </div>
                                      <div class="post-text">
-                                    	<p>Online word counters are a perfect tool for anyone who needs to keep a count of their words and characters, but doesn’t use Microsoft Word. </p>
+                                    	<p>Just paste any text to quickly change case</p>
 
                                    
                                     </div>
                                     <div class="blog-post-info">
                                     
-                                    <h3 class="post-name ver2">Whom is this word counting tool for?</h3>
+                                    <h3 class="post-name ver2">Benefits of using the Change Text Case Tool</h3>
                                 </div>
                                      <div class="post-text">
-                                    	<p>Bloggers/Content Writers</p>
-                                    	<p>Teachers/Students</p>
+                                    	<p>Many word editing software do not offer the case convert feature. The good news is that you can use our free tool to solve possible capitalization issues. </p>
 
                                    
                                     </div>
@@ -165,17 +165,17 @@ Change Text Case
                          <aside class="widget widget_category">
                             <h3 class="widget-title">Tags</h3>
                             <ul>
-                                <li><a href="{{route('word-counter')}}">character counter</a></li>
-                                <li><a href="{{route('word-counter')}}">how many words</a></li>
-                                <li><a href="{{route('word-counter')}}">word counter tool</a></li>
-                                <li><a href="{{route('word-counter')}}">count characters</a></li>
-                                <li><a href="{{route('word-counter')}}">word counter online</a></li>
+                                <li><a href="{{route('text-case')}}">capital letters to lowercase</a></li>
+                                <li><a href="{{route('text-case')}}">convert to capital letters</a></li>
+                                <li><a href="{{route('text-case')}}">text case converter</a></li>
+                                <li><a href="{{route('text-case')}}">uppercase to lowercase converter</a></li>
+                                <li><a href="{{route('text-case')}}">big letters to small letters</a></li>
 
-                                <li><a href="{{route('word-counter')}}">online character counter</a></li>
-                                <li><a href="{{route('word-counter')}}">character count online</a></li>
-                                <li><a href="{{route('word-counter')}}">characters count</a></li>
-                                <li><a href="{{route('word-counter')}}">count my words</a></li>
-                                <li><a href="{{route('word-counter')}}">word couter</a></li>
+                                <li><a href="{{route('text-case')}}">caps to lower case</a></li>
+                                <li><a href="{{route('text-case')}}">lowercase online</a></li>
+                                <li><a href="{{route('text-case')}}">change upper case to lower case</a></li>
+                                <li><a href="{{route('text-case')}}">all caps converter</a></li>
+                                <li><a href="{{route('text-case')}}">capital to small</a></li>
                             </ul>
                         </aside>
                        

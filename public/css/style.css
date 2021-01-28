@@ -7009,7 +7009,7 @@ body {
 .single-post {
   padding-bottom: 50px; }
   .single-post.v2 {
-    padding-top: 50px; }
+    padding-top: 30px; }
 
 .post-image {
   margin-bottom: 40px; }
@@ -7216,7 +7216,7 @@ body {
       margin-left: 40px; } }
 
 .post-reply {
-  padding-top: 35px; }
+  padding-top: 10px; }
 
 .comment-form:before, .comment-form:after {
   content: " ";
@@ -7225,7 +7225,7 @@ body {
   clear: both; }
 @media (min-width: 1025px) {
   .comment-form {
-    margin-top: 50px; } }
+    margin-top: 5px; } }
 .comment-form .form-group label {
   font-size: 14px;
   font-weight: 500;
@@ -7239,7 +7239,7 @@ body {
     .comment-form .form-group input {
       margin-bottom: 15px; } }
 .comment-form .form-group textarea {
-  height: 243px;
+  height: 100px;
   background: #f8f8f8;
   border: 1px solid #f1f1f1;
   border-radius: 0; }
