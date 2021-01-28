@@ -29,3 +29,13 @@ Route::post('/email-subscribe', 'EmailsubscribeController@subscribe')->name('ema
 
 Route::post('word-counter/calc', 'WordCounterController@calculate')->name('word-counter-calc');
 
+
+Route::get('/online-md5-generator', function(){return view('tools/online-md5-generator');})->name('md5-generator');
+
+Route::post('/online-md5-generator/generate', 'Md5generatorController@generate')->name('md5-generator-generate');
+
+
+Route::get('/change-text-case', function(){return view('tools/change-text-case');})->name('text-case');
+
+Route::post('/change-text-case/change', 'Md5generatorController@generate')->name('text-case-change');
+

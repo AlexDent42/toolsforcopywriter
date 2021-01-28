@@ -3,23 +3,23 @@
 
 
 @section('title')
-Free Word Counter - Count Words &amp; Correct Writing| ToolsforCopywriter.com
+Change Text Case | ToolsforCopywriter.com
 @endsection
 
 @section('description')
-Copy and paste your text into the online editor to count its words and characters and check keyword density ⭐Free Word Counter - Count Words &amp; Correct Writing
+Change Text Case is a handy web application that enables you to change the text case of any given text. Simply copy and paste the text into the text area below and click the required text case.
 @endsection
 
 @section('keywords')
-word counter, word count, character count
+Change Text Case
 @endsection
 
 @section('main-title')
-Free Word Counter
+Change Text Case
 @endsection
 
 @section('current-url')
-{{route('word-counter')}}
+{{route('text-case')}}
 @endsection
 
 
@@ -184,8 +184,6 @@ Free Word Counter
                 </div>
             </div>
         </div>
-        @php
-            session()->forget(['words', 'characters', 'withoutspaces' , 'readingtime' , 'speakingtime']);
-        @endphp
+       
 
 @endsection

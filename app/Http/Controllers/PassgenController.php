@@ -46,10 +46,11 @@ class PassgenController extends Controller
 					 $random_string.=$includeSymbols[$isTemp];
 					}
 			 else $includeSymbols='';
+			 $permitted_chars='';
 								 
 													
 			$permitted_chars = $numbers.$lowercase.$uppercase.$includeSymbols;
-			$perm_length=strlen($permitted_chars);
+			$perm_length=strlen($permitted_chars) - 1;
 
 								
  

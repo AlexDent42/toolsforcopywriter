@@ -44,6 +44,11 @@ arsort($res);
 	return redirect()->back();
 
 
+	session(['words' => $res_words, 'characters' => $res_len, 'withoutspaces' => $res_spaces, 'readingtime' => $readingTime, 'speakingtime' => $speakingTime]);
+
+	return redirect()->back();
+
+
 /*
 
 $other=100;

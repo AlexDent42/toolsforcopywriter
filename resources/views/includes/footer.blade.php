@@ -53,6 +53,9 @@
     <script src="js/slick.min.js"></script>
     <script src="js/masonry.pkgd.min.js"></script>
     <script src="js/main.js"></script>
+    @section('session-die')
+
+    @endsection
 </body>
 
 </html>

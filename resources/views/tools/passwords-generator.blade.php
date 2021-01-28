@@ -52,7 +52,7 @@ Online Password Generator
                                                 <div class="row">
                                                     <div class="col-md-6 col-xs-12">
                                                        
-                                                        <input type="text" id="myInput" class="form-control" value="{{session('password')}}" placeholder="Your new password will appear here.">
+                                                        <input type="text" id="myInput" class="form-control" value="{{session()->pull('password')}}" placeholder="Your new password will appear here.">
                                                         </div>
                                                     <div class="col-md-6 col-xs-12">
                                                         <script>
