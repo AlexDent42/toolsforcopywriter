@@ -39,3 +39,15 @@ Route::get('/change-text-case', function(){return view('tools/change-text-case')
 
 Route::post('/change-text-case/change', 'ChangetextcaseController@change')->name('text-case-change');
 
+Route::get('/online-text-editor', function(){return view('tools/online-text-editor');})->name('text-editor');
+
+Route::get('/reverse-text-generator', function()	{return view('tools/reverse-text-generator');	})->name('reverse-text');
+
+Route::post('/reverse-text-generator/generate', 'ReversetextgenController@generate')->name('reverse-generate');
+
+
+Route::get('/test', function()
+	{
+		return view('/test');
+	});
+

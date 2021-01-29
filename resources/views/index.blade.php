@@ -128,6 +128,46 @@ Online Tools for Copywriter
                         </div>
                     </div>
                     <!--End new tool-->
+                     <!--new tool-->
+                    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                        <div class="blog-post-item item-grid">
+                            <a class="hover-images" href="{{route('text-editor')}}">
+                            <img src="img/online-text-editor.png" alt="Online text editor" class="img-reponsive">
+                        </a>
+                            <div class="post-metas ver--grid">
+                                <div class="categories">
+                                    <a href="#" rel="category tag">Tool</a>
+                                </div>
+                                <span class="post-comments-number">0</span>
+                            </div>
+                            <div class="blog-post-info">
+                               
+                                <h3 class="post-name"><a href="{{route('text-editor')}}">Online Text Editor</a></h3>
+                                 <div class="post-date">To edit text online use our online text editor to edit plain text.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End new tool-->
+                      <!--new tool-->
+                    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                        <div class="blog-post-item item-grid">
+                            <a class="hover-images" href="{{route('reverse-text')}}">
+                            <img src="img/reverse-text-generator.png" alt="Reverse text generator" class="img-reponsive">
+                        </a>
+                            <div class="post-metas ver--grid">
+                                <div class="categories">
+                                    <a href="#" rel="category tag">Tool</a>
+                                </div>
+                                <span class="post-comments-number">0</span>
+                            </div>
+                            <div class="blog-post-info">
+                               
+                                <h3 class="post-name"><a href="{{route('reverse-text')}}">Reverse Text Generator</a></h3>
+                                 <div class="post-date">Reverse text generator helps you to generate backward, mirrored, flipped text.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End new tool-->
                     
                     
                     

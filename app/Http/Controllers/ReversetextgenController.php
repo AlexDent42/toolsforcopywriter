@@ -1,0 +1,78 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Http\Requests\ReversetextgenRequest;
+
+class ReversetextgenController extends Controller
+{
+   public function generate(ReversetextgenRequest $request)
+   {
+   	$text = $request-> input('text');
+
+   	if($request->input('text-value')== 'reverse-text')
+   	{
+   		$result = $this->reverseText($text);
+
+   	}
+
+   	if($request->input('text-value')=='reverse-wording')
+   	{
+   		$result = $this->reverseWording($text);
+
+   	}
+
+   	if($request->input('text-value')=='reverse-each-word-s-lettering')
+   	{
+   		$result = $this->reverseEachWordsLettering($text);
+   		
+   	}
+
+   	if($request->input('text-value')=='upside-down')
+   	{
+   		$result = $this->upsideDown($text);
+   		
+   	}
+
+   	session(['result' => $result]);
+
+
+   	return redirect()->back();
+
+
+   }
+
+
+
+   public function reverseText($text)
+   {
+   	return strrev($text);
+
+   }
+
+      public function reverseWording($text)
+   {
+   	$array = array_reverse(explode(' ', $text));
+   	return implode(' ', $array); 
+   	
+   }
+
+    public function reverseEachWordsLettering($text)
+   {
+   		$array = explode(' ', $text);
+   		foreach($array as $element)
+   		{
+   			$result[] = strrev($element); 
+   		}
+
+   		return implode(' ', $result);
+
+   	
+   }
+
+   public function upsideDown($text)
+   {
+   	
+   }
+}

@@ -52,47 +52,7 @@ Free Word Counter
 
                                             <div class="post-reply">
 
-                                        @if(session()->has('smth'))
-                									 <div class="row">
-                                                         <div class="col-md-6 col-xs-12">
-                                                             <h3 class="post-title widget-title"> Keyword Density</h3>         
-                                                         </div>
-
-                						
-                										 <div class="col-md-6 col-xs-12">
-                                                        
-                                                             <label><i></i></label>
-                                                                       
-                                                         </div>
-                										
-
-                										 
-                										 
-                										   <div class="col-md-6 col-xs-12">
-                														
-                                                                        <label><i>key;?</i></label>
-                                                                       
-                                                            </div>
-                                                            <div class="col-md-6 col-xs-12">
-                                                                <label>perc.'%'</label>
-                                                                       
-                                                            </div>
-                								
-                								
-                								
-                								
-                										 <div class="col-md-6 col-xs-12">
-                														
-                                                                <label><i>Other</i></label>
-                                                                       
-                                                         </div>
-                                                         <div class="col-md-6 col-xs-12">
-                                                                <label> round($other, 1).'%';?></label>
-                                                                       
-                                                        </div>
-                				
-                                                    </div>
-                                                       @endif
+                                    
                 									
         									
         									 @include('includes.messages')
