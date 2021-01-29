@@ -45,6 +45,10 @@ Route::get('/reverse-text-generator', function()	{return view('tools/reverse-tex
 
 Route::post('/reverse-text-generator/generate', 'ReversetextgenController@generate')->name('reverse-generate');
 
+Route::get('/text-to-binary-converter', function()	{return view('tools/text-to-binary-converter');	})->name('text-binary');
+
+Route::post('/text-to-binary-converter/convert', 'TexttobinaryconverterController@convert')->name('text-binary-convert');
+
 
 Route::get('/test', function()
 	{

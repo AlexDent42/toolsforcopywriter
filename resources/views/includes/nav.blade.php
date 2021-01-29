@@ -12,23 +12,43 @@
                                             <a href="{{route('check-server-status')}}">Check server status</a>
                                             
                                         </li>
-                                        <li class="level1 dropdown hassub">
+
+                                        <li class="level1 active dropdown">
                                             <a href="{{route('passwords-generator')}}">Passwords generator</a>
-                                            <span class="plus js-plus-icon"></span>
+
                                             
                                         </li>
 
-                                         <li class="level1 dropdown hassub">
-                                            <a href="{{route('word-counter')}}">Word counter</a>
-                                            <span class="plus js-plus-icon"></span>
-                                            
-                                        </li>
-                                       
                                         <li class="level1 active dropdown">
-                                            <a href="#">Sign in</a>
-                                            <span class="plus js-plus-icon"></span>
-                                            
+                                             <a href="{{route('word-counter')}}">Word counter</a>                
                                         </li>
+
+                                         <li class="level1 active dropdown">
+                                             <a href="{{route('text-case')}}">Change Text Case</a>                
+                                        </li>
+
+                                           <li class="level1 active dropdown">
+                                             <a href="{{route('md5-generator')}}">Online MD5 generator</a>                
+                                        </li>
+
+                                        <li class="level1 active dropdown">
+                                             <a href="{{route('text-editor')}}">Online Text Editor</a>                
+                                        </li>
+
+                                        <li class="level1 active dropdown">
+                                             <a href="{{route('reverse-text')}}">Reverse Text Generator</a>                
+                                        </li>
+
+                                        <li class="level1 active dropdown">
+                                             <a href="{{route('text-binary')}}">Text to Binary Converter</a>                
+                                        </li>
+
+                                         <li class="level1 active dropdown">
+                                             <a href="#">Sign in</a>                
+                                        </li>
+                                      
+
+                                       
                                     </ul>
                                 </div>
 								<!-- Yandex.Metrika counter -->

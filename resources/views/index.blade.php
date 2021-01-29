@@ -168,6 +168,26 @@ Online Tools for Copywriter
                         </div>
                     </div>
                     <!--End new tool-->
+                    <!--new tool-->
+                    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                        <div class="blog-post-item item-grid">
+                            <a class="hover-images" href="{{route('text-binary')}}">
+                            <img src="img/text-to-binary-converter.jpg" alt="Text to binary converter" class="img-reponsive">
+                        </a>
+                            <div class="post-metas ver--grid">
+                                <div class="categories">
+                                    <a href="#" rel="category tag">Tool</a>
+                                </div>
+                                <span class="post-comments-number">0</span>
+                            </div>
+                            <div class="blog-post-info">
+                               
+                                <h3 class="post-name"><a href="{{route('text-binary')}}">Text to Binary Converter</a></h3>
+                                 <div class="post-date">Get your plain text converted to data that can be interpreted via electronic machines</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End new tool-->
                     
                     
                     

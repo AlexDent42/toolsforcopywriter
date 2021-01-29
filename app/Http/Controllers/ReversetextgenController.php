@@ -29,9 +29,9 @@ class ReversetextgenController extends Controller
    		
    	}
 
-   	if($request->input('text-value')=='upside-down')
+   	if($request->input('text-value')=='flip-text')
    	{
-   		$result = $this->upsideDown($text);
+   		$result = $this->reverseText($text);
    		
    	}
 
@@ -71,8 +71,5 @@ class ReversetextgenController extends Controller
    	
    }
 
-   public function upsideDown($text)
-   {
-   	
-   }
+
 }
