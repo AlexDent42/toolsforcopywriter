@@ -7,7 +7,7 @@ Online Text Editor | ToolsforCopywriter.com
 @endsection
 
 @section('description')
-To edit text online use our online text editor to edit plain text.
+To edit text online use our online text editor to edit plain text.⭐ToolsForCopywriter.com
 @endsection
 
 @section('keywords')

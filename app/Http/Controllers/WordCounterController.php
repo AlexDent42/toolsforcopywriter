@@ -38,28 +38,50 @@ $res_spaces= strlen(implode('',$arr));
 $res = array_count_values($newar);
 arsort($res);
 
-	
-	session(['words' => $res_words, 'characters' => $res_len, 'withoutspaces' => $res_spaces, 'readingtime' => $readingTime, 'speakingtime' => $speakingTime]);
-
-	return redirect()->back();
-
-
-	session(['words' => $res_words, 'characters' => $res_len, 'withoutspaces' => $res_spaces, 'readingtime' => $readingTime, 'speakingtime' => $speakingTime]);
-
-	return redirect()->back();
-
 
 /*
-
+$resultArray = [];
 $other=100;
 foreach ($res as $key=>$value)
 {
 if($value>1 && $key!='the' && $key!='a' && $key!='or' && $key!='is' && $key!='in' && $key!='on' && $key!='and')
-{$perc = round($value*100/$res_words, 1);$other-=$perc;
-										
-*/
+{
+	$perc = round($value*100/$res_words, 1);
+	$other-=$perc;
 
-
-
-  	}
+	$resultArray[] = array($key => $perc);
+	
 }
+
+}*/
+
+
+	
+	session(['words' => $res_words, 'characters' => $res_len, 'withoutspaces' => $res_spaces, 'readingtime' => $readingTime, 'speakingtime' => $speakingTime, 'density' => $res]);
+
+	return redirect()->back();
+}
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

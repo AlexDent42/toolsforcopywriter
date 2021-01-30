@@ -6,7 +6,7 @@ Check Server Status - Check If Website Is Down| ToolsforCopywriter.com
 @endsection
 
 @section('description')
-Check the status of your favorite website. Just enter the URL in the below HTTP server status checker tool
+Check the status of your favorite website. Just enter the URL in the below HTTP server status checker tool⭐ToolsForCopywriter.com
 @endsection
 
 @section('keywords')

@@ -43,6 +43,10 @@
                                              <a href="{{route('text-binary')}}">Text to Binary Converter</a>                
                                         </li>
 
+                                        <li class="level1 active dropdown">
+                                             <a href="{{route('keyword-density')}}">Keyword Density Checker</a>                
+                                        </li>
+
                                          <li class="level1 active dropdown">
                                              <a href="#">Sign in</a>                
                                         </li>

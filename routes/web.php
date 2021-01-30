@@ -49,6 +49,14 @@ Route::get('/text-to-binary-converter', function()	{return view('tools/text-to-b
 
 Route::post('/text-to-binary-converter/convert', 'TexttobinaryconverterController@convert')->name('text-binary-convert');
 
+Route::get('/merge-words-online', function()	{return view('tools/merge-words-online');	})->name('merge-words');
+
+Route::post('/merge-words-online/merge', 'MergewordsonlineController@merge')->name('merge-words-merge');
+
+Route::get('/keyword-density-checker', function()	{return view('tools/keyword-density-checker');	})->name('keyword-density');
+
+Route::post('/keyword-density-checker/check', 'KeyworddensityController@check')->name('keyword-density-checker');
+
 
 Route::get('/test', function()
 	{

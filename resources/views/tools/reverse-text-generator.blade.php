@@ -7,7 +7,7 @@ Reverse Text Generator | ToolsforCopywriter.com
 @endsection
 
 @section('description')
-Reverse text generator helps you to generate backward, mirrored, flipped text. Copy and paste or enter your simple text to create its reverse version.
+Reverse text generator helps you to generate backward, mirrored, flipped text. Copy and paste or enter your simple text to create its reverse version.⭐ToolsForCopywriter.com
 @endsection
 
 @section('keywords')
