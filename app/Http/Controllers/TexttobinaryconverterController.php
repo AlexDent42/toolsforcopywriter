@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\TexttobinRequest;
+use App\Models\Texttobinary;
 
 class TexttobinaryconverterController extends Controller
 {
@@ -21,6 +22,15 @@ class TexttobinaryconverterController extends Controller
   		$result = $this->binaryToText($text);
   	}
   	session(['result' => $result]);
+
+
+    $texttobinary = new Texttobinary();
+    $texttobinary -> text = $text;
+    $texttobinary -> edited_text = $result;
+    $texttobinary -> settings = $request-> input('text-value');
+    $texttobinary -> save();
+
+
 
 
 

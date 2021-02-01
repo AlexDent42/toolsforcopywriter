@@ -22,6 +22,9 @@ Free Word Counter
 {{route('word-counter')}}
 @endsection
 
+@section('comment_post_ID')
+132
+@endsection
 
 
 
@@ -48,6 +51,10 @@ Free Word Counter
 									
                                 </div>
                                 @endif
+                                @php
+                                session()->forget('density', 'words', 'characters', 'withoutspaces', 'readingtime', 'speakingtime' )
+                                    
+                                @endphp
 
 
                                             <div class="post-reply">
@@ -70,6 +77,7 @@ Free Word Counter
                                                         <button type="submit" class="btn btn-submit">Count</button>
                                                 </form>
                                     </div>
+
 
 
                                 <div class="post-metas ver2">
@@ -112,6 +120,7 @@ Free Word Counter
 
                                     
                                 </div>
+                                 @include('includes.comments')
                             </div>
                         </div>
                     </div>

@@ -49,6 +49,7 @@ $words = new Wordcounter();
   		$words -> reading_time = $readingTime;
   		$words -> characters = $res_len;
   		$words-> withoutspaces = $res_spaces;
+  		$words-> keywords_density = json_encode($res);
   		$words->save();
 
 	

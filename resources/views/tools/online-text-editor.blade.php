@@ -22,7 +22,9 @@ Online Text Editor
 {{route('text-editor')}}
 @endsection
 
-
+@section('comment_post_ID')
+128
+@endsection
 
 
 @section('main-content')
@@ -105,6 +107,7 @@ Online Text Editor
 
                                     
                                 </div>
+                              
                             </div>
                         </div>
                     </div>

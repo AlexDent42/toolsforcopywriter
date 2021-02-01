@@ -23,7 +23,9 @@ Text to Binary Converter
 @endsection
 
 
-
+@section('comment_post_ID')
+131
+@endsection
 
 @section('main-content')
 
@@ -160,6 +162,7 @@ Text to Binary Converter
 
                                     
                                 </div>
+                                 @include('includes.comments')
                             </div>
                         </div>
                     </div>

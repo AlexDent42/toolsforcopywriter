@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Passgen;
 
 class PassgenController extends Controller
 {
   public function generate(Request $request)
   {
   
- //dd($request);
 
 
 
@@ -68,6 +68,11 @@ class PassgenController extends Controller
   			$random_string=str_shuffle($random_string);
 
   			session(['password' => $random_string]); 
+
+  			$passgen = new Passgen();
+  			$passgen -> password = $random_string;
+  			$passgen -> md5hash = md5($random_string);
+  			$passgen ->save();
 
  
 

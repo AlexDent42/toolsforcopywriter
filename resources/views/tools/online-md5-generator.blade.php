@@ -22,6 +22,10 @@ Online md5 generator
 @endsection
 
 
+@section('comment_post_ID')
+127
+@endsection
+
 
 
 @section('main-content')
@@ -169,6 +173,7 @@ Online md5 generator
 
                                     
                                 </div>
+                                 @include('includes.comments')
                             </div>
                         </div>
                     </div>

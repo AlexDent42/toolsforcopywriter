@@ -22,6 +22,10 @@ Keyword Density Checker
 {{route('keyword-density')}}
 @endsection
 
+@section('comment_post_ID')
+123
+@endsection
+
 
 
 
@@ -135,6 +139,7 @@ Keyword Density Checker
 
                                     
                                 </div>
+                                @include('includes.comments')
                             </div>
                         </div>
                     </div>

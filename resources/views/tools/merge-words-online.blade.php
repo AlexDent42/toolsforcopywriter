@@ -22,6 +22,10 @@ Merge Words Online
 {{route('merge-words')}}
 @endsection
 
+@section('comment_post_ID')
+126
+@endsection
+
 
 
 
@@ -156,6 +160,7 @@ Manhattan">{{ session()->pull('result3') }}</textarea>
 
                                     
                                 </div>
+                                 @include('includes.comments')
                             </div>
                         </div>
                     </div>

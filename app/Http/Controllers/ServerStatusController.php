@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\CheckUrlRequest;
 use App\Models\Domains;
+use App\Models\Commentform;
 
 class ServerStatusController extends Controller
 {
@@ -19,10 +20,13 @@ class ServerStatusController extends Controller
 
 	public function firstUpload()
 	{
-		$data = Domains::orderBy('id', 'desc')->take(5)->get();
+		$urls = Domains::orderBy('id', 'desc')->take(10)->get();
+		$data = Commentform::orderBy('comment_id', 'desc')->where('comment_post_ID','=', 129)->where('comment_approved','=',1)->take(50)->get();
+
+		
 
 
-		return view('tools/check-server-status', ['data'=>$data ]);
+		return view('tools/check-server-status', ['data'=>$data, 'urls' => $urls ]);
 	}
 
 

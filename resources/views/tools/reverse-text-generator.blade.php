@@ -22,7 +22,9 @@ Reverse Text Generator
 {{route('reverse-text')}}
 @endsection
 
-
+@section('comment_post_ID')
+130
+@endsection
 
 
 @section('main-content')
@@ -158,6 +160,7 @@ Reverse Text Generator
 
                                     
                                 </div>
+                                 @include('includes.comments')
                             </div>
                         </div>
                     </div>

@@ -22,6 +22,10 @@ Change Text Case
 {{route('text-case')}}
 @endsection
 
+@section('comment_post_ID')
+124
+@endsection
+
 
 
 
@@ -152,6 +156,7 @@ Change Text Case
 
                                     
                                 </div>
+                                 @include('includes.comments')
                             </div>
                         </div>
                     </div>

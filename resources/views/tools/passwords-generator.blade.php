@@ -22,7 +22,9 @@ Online Password Generator
 {{route('passwords-generator')}}
 @endsection
 
-
+@section('comment_post_ID')
+129
+@endsection
 
 
 @section('main-content')
@@ -280,6 +282,7 @@ Online Password Generator
 
                                     
                                 </div>
+                                 @include('includes.comments')
                             </div>
                         </div>
                     </div>

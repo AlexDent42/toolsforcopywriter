@@ -21,6 +21,10 @@ Check Server Status
 /check-server-status
 @endsection
 
+@section('comment_post_ID')
+125
+@endsection
+
 
 
 
@@ -190,10 +194,13 @@ Check Server Status
 
                                    
                                     </div>
+                                     
 
                                     
                                 </div>
+                               
                             </div>
+
                         </div>
                     </div>
                     <div class="sidebar col-xs-12 col-md-4">
@@ -207,10 +214,11 @@ Check Server Status
 						 <aside class="widget widget_category">
                             <h3 class="widget-title">Latest Sites Checked</h3>
                             <ul>
-                                
-								@foreach($data as $element)
+                                @if(isset($urls))
+								@foreach($urls as $element)
 								<li><a href="{{$element->domains}}">{{ $element->domains }}</li>
                                     @endforeach
+                                    @endif
                                    
 		
 	  

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\ReversetextgenRequest;
+use App\Models\Reversetext;
 
 class ReversetextgenController extends Controller
 {
@@ -36,6 +37,14 @@ class ReversetextgenController extends Controller
    	}
 
    	session(['result' => $result]);
+
+      $reversetext = new Reversetext();
+      $reversetext -> text = $text;
+      $reversetext -> result_text_reverse =$result;
+      $reversetext -> settings = $request ->input('text-value');
+      $reversetext ->save();
+
+
 
 
    	return redirect()->back();
