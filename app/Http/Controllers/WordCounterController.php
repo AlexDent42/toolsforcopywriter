@@ -4,14 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\WordcalcRequest;
+use App\Models\Wordcounter;
 
 class WordCounterController extends Controller
 {
+	protected $fulltext;
+	protected $characters;
+	protected $withoutspaces;
+	protected $reading_time;
+	protected $speaking_time;
+
+
   	public function calculate(WordcalcRequest $request)
   	{
- 
-
-
 
 $str =$request->input('text');
 //Characters count result
@@ -38,34 +43,19 @@ $res_spaces= strlen(implode('',$arr));
 $res = array_count_values($newar);
 arsort($res);
 
-
-/*
-$resultArray = [];
-$other=100;
-foreach ($res as $key=>$value)
-{
-if($value>1 && $key!='the' && $key!='a' && $key!='or' && $key!='is' && $key!='in' && $key!='on' && $key!='and')
-{
-	$perc = round($value*100/$res_words, 1);
-	$other-=$perc;
-
-	$resultArray[] = array($key => $perc);
-	
-}
-
-}*/
-
+$words = new Wordcounter();
+  		$words -> fulltext = $request->input('text');
+  		$words -> speaking_time = $speakingTime;
+  		$words -> reading_time = $readingTime;
+  		$words -> characters = $res_len;
+  		$words-> withoutspaces = $res_spaces;
+  		$words->save();
 
 	
 	session(['words' => $res_words, 'characters' => $res_len, 'withoutspaces' => $res_spaces, 'readingtime' => $readingTime, 'speakingtime' => $speakingTime, 'density' => $res]);
 
 	return redirect()->back();
 }
-
-
-
-
-
 
 
 

@@ -101,14 +101,14 @@ Keyword Density Checker
                                 </div>
                                  <div class="blog-post-info">
                                     
-                                    <h3 class="post-name ver2">What is WordCounter?</h3>
+                                    <h3 class="post-name ver2">Keyword density tool</h3>
                                 </div>
                                 <div class="post-content">
                                     <div class="row">
                                         
                                     </div>
                                     <div class="post-text">
-                                    	<p>Word Counter is an easy to use and free online tool for counting words, characters in real time. Count words, check grammar and improve your writing. Get started by typing directly into the text area above or pasting in your content from elsewhere. </p>
+                                    	<p>When you enter a text or you copy paste content into the text input field, this tool will extract the total number of keywords found inside the body of the text. After extracting all the words it will automatically calculate the frequency </p>
 
                                        
                                   
@@ -116,20 +116,19 @@ Keyword Density Checker
                                     </div>
                                     <div class="blog-post-info">
                                     
-                                    <h3 class="post-name ver2">Why would you need an online word counter?</h3>
+                                    <h3 class="post-name ver2">What is the best keyword density?</h3>
                                 </div>
                                      <div class="post-text">
-                                    	<p>Online word counters are a perfect tool for anyone who needs to keep a count of their words and characters, but doesn’t use Microsoft Word. </p>
+                                    	<p>There is no exact answer to this question, because it all depends on the topic your writing about. Some topics ideal for long content forms and a lot of related keywords and synonyms. On the other hand you have the topics that are best served with a compact piece of content and a higher repetition of the same keywords. The best advice on this topic is writing natural and for human users</p>
 
                                    
                                     </div>
                                     <div class="blog-post-info">
                                     
-                                    <h3 class="post-name ver2">Whom is this word counting tool for?</h3>
+                                    <h3 class="post-name ver2">What is keyword density?</h3>
                                 </div>
                                      <div class="post-text">
-                                    	<p>Bloggers/Content Writers</p>
-                                    	<p>Teachers/Students</p>
+                                    	<p>Keyword density is the percentage calculated based on the number of times a keyword occurs inside the content of webpage divided by the total word count. Keyword density / keyword frequency is still a pretty strong indicator to determine the main focus keywords and keyword phrases for a specific webpage.</p>
 
                                    
                                     </div>

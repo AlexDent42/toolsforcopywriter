@@ -4,23 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\ChangetextcaseRequest;
+use App\Models\Changetextcase;
 
 class ChangetextcaseController extends Controller
 {
 
-	//protected static $text;
-
-
-
-    public function changes(ChangetextcaseRequest $request)
-    {
-    	dd($request);
-
-    }
 
 
      public function change(ChangetextcaseRequest $request)
     {
+
     	$text= $request->input('text');
 
     	if($request->input('text-value')=='upper-case')
@@ -44,6 +37,13 @@ class ChangetextcaseController extends Controller
     	{
     		$result = self::alternateCase($text);
     	}
+
+
+        $changetextcase = new Changetextcase();
+        $changetextcase -> text_before = $text;
+        $changetextcase -> text_after = $result;
+        $changetextcase -> settings = $request->input('text-value');
+        $changetextcase -> save();
 
     	session(['result' => $result]);
 
