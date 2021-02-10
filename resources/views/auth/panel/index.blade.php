@@ -16,13 +16,15 @@
                         </tr>
                       </thead>
                       <tbody>
+                        @foreach ($users as $user)
                         <tr>
-                          <td>Vishnu Serghei</td>
-                          <td>2012/01/01</td>
-                          <td>Member</td>
+                          <td>{{ $user->name }}</td>
+                          <td>{{ $user->email }}</td>
+                          <td>{{ $user->created_at }}</td>
                           <td><span class="badge badge-success">Active</span></td>
                         </tr>
-                        <tr>
+                        @endforeach
+                       {{--  <tr>
                           <td>Zbyněk Phoibos</td>
                           <td>2012/02/01</td>
                           <td>Staff</td>
@@ -45,7 +47,7 @@
                           <td>2012/01/21</td>
                           <td>Staff</td>
                           <td><span class="badge badge-success">Active</span></td>
-                        </tr>
+                        </tr> --}}
                       </tbody>
                     </table>
                     <nav>

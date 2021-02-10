@@ -76,12 +76,24 @@ Route::get('/test', function()
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+ Route::get('/admin', [App\Http\Controllers\HomeController::class, 'index'])->name('admin');
 
 
 
-Route::middleware(['auth'])->prefix('panel')->group(function() 
+Route::middleware(['auth'])->prefix('admin')->group(function() 
 { 
+	Route::get('/', 'Dashboard\DashboardIndexController@index');
 	Route::get('/users', function(){return 'usechjfhdrs';}); 
-	Route::get('/comment', function(){return 'comments';}); 
+	Route::get('/comments', function(){return 'comments';}); 
 }); 
+
+
+
+
+
+
+
+
+
+
+
