@@ -17,6 +17,9 @@
 
 <body>
     <!--push menu cart -->
+
+
+    @yield('register')
     
     <!-- End cart -->
     <div class="modal fade" id="myModal" role="dialog">
