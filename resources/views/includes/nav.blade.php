@@ -47,12 +47,75 @@
                                              <a href="{{route('keyword-density')}}">Keyword Density Checker</a>                
                                         </li>
 
-                                         <li class="level1 active dropdown">
-                                             <a href="/login">Sign in</a>                
-                                        </li>
-                                      
 
+                                         <!-- Authentication Links -->
+                        @guest
+                        <li class="level1 active dropdown">
+                                <a href="#">Sign in</a>
+                                <span class="plus js-plus-icon"></span>
+                                 <ul class="dropdown-menu menu-level-1">
+
+                                            @if (Route::has('login'))
+                                                  <li class="level2">
+                                                    <a href="{{ route('login') }}">{{ __('Login') }}</a>
+                                                </li>
+                                            @endif
+                                            
+                                            @if (Route::has('register'))
+                                                 <li class="level2">
+                                                    <a href="{{ route('register') }}">{{ __('Register') }}</a>
+                                                </li>
+                                            @endif
+                                </ul>
+                        </li>   
+                        @else
+                             
+                                 <li class="level1 active dropdown">
+                                    <a  href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+
+                     
+                        @endguest
+                   
+
+
+
+                          {{--   <li class="level1 active dropdown">
+                                <a href="#">Pages</a>
+                                <span class="plus js-plus-icon"></span>
+                                <ul class="dropdown-menu menu-level-1">
+                                    <li class="level2"><a href="login.html" title="Login">Login</a></li>
+                                    <li class="level2"><a href="register.html" title="Register">Register</a></li>
+                                </ul>
+                            </li> --}}
                                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                                     </ul>
                                 </div>
 								<!-- Yandex.Metrika counter -->

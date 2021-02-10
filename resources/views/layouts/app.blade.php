@@ -1,10 +1,17 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+     <meta charset="UTF-8">
+
+   
+    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title> @yield('title')</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>@if(View::hasSection('title'))@yield('title')
+    @else Online Tools for Copywriter | toolsforcopywriter.com
+    @endif
+</title>
     <meta name="description" content="@yield('description')" />
     <meta name="keywords" content="@yield('keywords')" />
     <link rel="stylesheet" href="css/slick.css">
@@ -13,13 +20,14 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/png">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+     
 </head>
 
 <body>
     <!--push menu cart -->
 
 
-    @yield('register')
+    
     
     <!-- End cart -->
     <div class="modal fade" id="myModal" role="dialog">
@@ -56,7 +64,9 @@
                     </div>
                     <!--end topbar-left-->
                     <div class="logo hidden-xs hidden-sm">
-                        <a href="@yield('current-url')"> <h1 class="post-name ver2">@yield('main-title')</h1></a>
+                        <a href="@yield('current-url')"> <h1 class="post-name ver2">@if(View::hasSection('main-title'))@yield('main-title')
+    @else Online Tools for Copywriter
+    @endif</h1></a>
 
                     </div>
                     <!--end logo-->

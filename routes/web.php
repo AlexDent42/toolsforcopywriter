@@ -63,7 +63,7 @@ Route::get('/keyword-density-checker', function()
 
 
 
-Route::post('/keyword-density-checker/check', 'KeyworddensityController@check')->name('keyword-density-checker');
+// Route::post('/keyword-density-checker/check', 'KeyworddensityController@check')->name('keyword-density-checker');
 
 Route::post('/comment-form', 'CommentformController@submitComment')->name('comment-form');
 
