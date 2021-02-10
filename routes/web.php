@@ -77,3 +77,11 @@ Route::get('/test', function()
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
+Route::middleware(['auth'])->prefix('panel')->group(function() 
+{ 
+	Route::get('/users', function(){return 'usechjfhdrs';}); 
+	Route::get('/comment', function(){return 'comments';}); 
+}); 
