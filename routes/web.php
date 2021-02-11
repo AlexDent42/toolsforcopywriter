@@ -88,7 +88,7 @@ Route::middleware(['auth'])->prefix('admin')->group(function()
 	Route::get('/comments', function(){return 'comments';}); 
 
 
-	 Route::resource('/users', UsersController::class);
+	 Route::resource('/users', Dashboard\UsersController::class);
 }); 
 
 

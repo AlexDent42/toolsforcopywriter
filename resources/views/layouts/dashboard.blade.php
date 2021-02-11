@@ -20,7 +20,7 @@
 	    <link href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css" rel="stylesheet">
 	    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic" rel="stylesheet">
 	    <!-- Main styles for this application-->
-	    <link href="css/dashboard/style.css" rel="stylesheet">
+	    <link href="/css/dashboard/style.css" rel="stylesheet">
 	    <link href="https://backstrap.net/vendors/pace-progress/css/pace.min.css" rel="stylesheet">
   </head>
   <body class="app aside-menu-fixed sidebar-lg-show">
@@ -29,7 +29,7 @@
       <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show"><span class="navbar-toggler-icon"></span></button>
       <ul class="nav navbar-nav d-md-down-none">
         <li class="nav-item px-3"><a class="nav-link" href="#">Dashboard</a></li>
-        <li class="nav-item px-3"><a class="nav-link" href="#">Users</a></li>
+        <li class="nav-item px-3"><a class="nav-link" href="{{ route('users.index') }}">Users</a></li>
         <li class="nav-item px-3"><a class="nav-link" href="#">Comments</a></li>
       </ul>
       <ul class="nav navbar-nav ml-auto">
@@ -54,7 +54,7 @@
            
             <li class="nav-title">Theme</li>
             <li class="nav-item"><a class="nav-link" href="colors.html"><i class="nav-icon la la-lg la-bullseye"></i> Dashboard</a></li>
-            <li class="nav-item"><a class="nav-link" href="typography.html"><i class="nav-icon la la-lg la-pencil"></i> Users</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ route('users.index') }}"><i class="nav-icon la la-lg la-pencil"></i> Users</a></li>
              <li class="nav-item"><a class="nav-link" href="typography.html"><i class="nav-icon la la-lg la-pencil"></i> Comments</a></li>
            
               </ul>

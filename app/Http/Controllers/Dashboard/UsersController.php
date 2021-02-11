@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UsersController extends Controller
@@ -14,7 +15,8 @@ class UsersController extends Controller
      */
     public function index()
     {
-        return "fhdkfh";
+        $users = User::simplePaginate(4);
+        return view('auth.panel.users', compact('users'));
     }
 
     /**
@@ -24,7 +26,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        //
+         return view('auth.panel.edit-user');
     }
 
     /**
@@ -35,7 +37,8 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       User::create($request->only(['name','email', 'status', 'password']));
+       return redirect()->route('users.index');
     }
 
     /**
@@ -44,9 +47,9 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(User $user)
     {
-        //
+        return view('auth.panel.show-user', compact('user'));
     }
 
     /**
@@ -55,9 +58,10 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(User $user)
     {
-        //
+       
+        return view('auth.panel.edit-user', compact('user'));
     }
 
     /**
@@ -67,9 +71,11 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, User $user)
     {
-        //
+       // dd($request);
+         $user->update($request->only(['name','email', 'status']));
+         return redirect()->back();
     }
 
     /**
@@ -78,8 +84,11 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $user)
     {
-        //
+        $user->delete();
+        return redirect()->route('users.index');
+
+        // dd($user);
     }
 }
