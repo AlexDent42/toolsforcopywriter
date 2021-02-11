@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Dashboard\UsersController;
+use App\Http\Controllers\Dashboard\CommentController;
 use App\Models\Commentform;
 
 
@@ -77,18 +78,20 @@ Route::get('/test', function()
 
 Auth::routes();
 
- Route::get('/admin', [App\Http\Controllers\HomeController::class, 'index'])->name('admin');
+ // Route::get('/admin', [App\Http\Controllers\HomeController::class, 'index'])->name('admin');
 
 
 
 Route::middleware(['auth'])->prefix('admin')->group(function() 
 { 
-	Route::get('/', 'Dashboard\DashboardIndexController@index');
+	Route::get('/', 'Dashboard\DashboardIndexController@index')->name('admin');
 	 // Route::get('/users', function(){return 'usechjfhdrs';}); 
 	Route::get('/comments', function(){return 'comments';}); 
 
 
 	 Route::resource('/users', Dashboard\UsersController::class);
+
+	Route::resource('/comments', Dashboard\CommentController::class);
 }); 
 
 

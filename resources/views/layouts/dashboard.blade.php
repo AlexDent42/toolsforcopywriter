@@ -28,9 +28,9 @@
       <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto ml-3" type="button" data-toggle="sidebar-show"><span class="navbar-toggler-icon"></span></button><a class="navbar-brand" href="#"><b>Back</b><span>strap</span></a>
       <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show"><span class="navbar-toggler-icon"></span></button>
       <ul class="nav navbar-nav d-md-down-none">
-        <li class="nav-item px-3"><a class="nav-link" href="#">Dashboard</a></li>
+        <li class="nav-item px-3"><a class="nav-link" href="{{ route('admin') }}">Dashboard</a></li>
         <li class="nav-item px-3"><a class="nav-link" href="{{ route('users.index') }}">Users</a></li>
-        <li class="nav-item px-3"><a class="nav-link" href="#">Comments</a></li>
+        <li class="nav-item px-3"><a class="nav-link" href="{{ route('comments.index') }}">Comments</a></li>
       </ul>
       <ul class="nav navbar-nav ml-auto">
         {{-- <li class="nav-item d-md-down-none"><a class="nav-link" href="#"><i class="icon-bell"></i><span class="badge badge-pill badge-danger">5</span></a></li>
@@ -53,9 +53,9 @@
           <ul class="nav">
            
             <li class="nav-title">Theme</li>
-            <li class="nav-item"><a class="nav-link" href="colors.html"><i class="nav-icon la la-lg la-bullseye"></i> Dashboard</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ route('admin') }}"><i class="nav-icon la la-lg la-bullseye"></i> Dashboard</a></li>
             <li class="nav-item"><a class="nav-link" href="{{ route('users.index') }}"><i class="nav-icon la la-lg la-pencil"></i> Users</a></li>
-             <li class="nav-item"><a class="nav-link" href="typography.html"><i class="nav-icon la la-lg la-pencil"></i> Comments</a></li>
+             <li class="nav-item"><a class="nav-link" href="{{ route('comments.index') }}"><i class="nav-icon la la-lg la-pencil"></i> Comments</a></li>
            
               </ul>
             </li>
@@ -228,6 +228,7 @@
       <div class="ml-auto"><span>Powered by </span><a href="https://coreui.io">CoreUI</a><span>&nbsp;&&nbsp;</span><a href="https://backpackforlaravel.com">Backpack for Laravel</a></div>
     </footer>
     <!-- CoreUI and necessary plugins-->
+    <script src="https://use.fontawesome.com/d4d6340577.js"></script>
     <script src="https://backstrap.net/vendors/jquery/js/jquery.min.js"></script>
     <script src="https://backstrap.net/vendors/popper.js/js/popper.min.js"></script>
     <script src="https://backstrap.net/vendors/bootstrap/js/bootstrap.min.js"></script>
