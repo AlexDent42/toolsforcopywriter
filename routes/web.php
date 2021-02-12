@@ -10,78 +10,60 @@ Route::get('/', function () {
     return view('index');
 })->name('index');
 
+/***
+**  TOOLS AREA
+**/
 
+//words counter tool
 Route::get('/word-counter', 'WordCounterController@index')->name('word-counter');
-
-
+Route::post('word-counter/calc', 'WordCounterController@calculate')->name('word-counter-calc');
+//passgen tool
 Route::get('/passwords-generator', 'PassgenController@index')->name('passwords-generator');
-
-
 Route::post('/passwords-generator/generate', 'PassgenController@generate')->name('passgenerate');
-
+//server status tool
 Route::get('/check-server-status', 'ServerStatusController@firstUpload')->name('check-server-status');
-
 Route::post('/check-server-status/check', 'ServerStatusController@submit')->name('server-status');
 
-Route::post('/email-subscribe', 'EmailsubscribeController@subscribe')->name('email-subscribe');
-
-
-Route::post('word-counter/calc', 'WordCounterController@calculate')->name('word-counter-calc');
-
-
+//md5 generator tool
 Route::get('/online-md5-generator', 'Md5generatorController@index')->name('md5-generator');
-
 Route::post('/online-md5-generator/generate', 'Md5generatorController@generate')->name('md5-generator-generate');
 
-
+//text case tool
 Route::get('/change-text-case', 'ChangetextcaseController@index')->name('text-case');
-
 Route::post('/change-text-case/change', 'ChangetextcaseController@change')->name('text-case-change');
-
+//online text editor tool
 Route::get('/online-text-editor', 'TextEditorController@index')->name('text-editor');
 
+//reverse text generator tool
 Route::get('/reverse-text-generator', 'ReversetextgenController@index')->name('reverse-text');
-
 Route::post('/reverse-text-generator/generate', 'ReversetextgenController@generate')->name('reverse-generate');
-
+//text to binary converter tool
 Route::get('/text-to-binary-converter', 'TexttobinaryconverterController@index')->name('text-binary');
-
 Route::post('/text-to-binary-converter/convert', 'TexttobinaryconverterController@convert')->name('text-binary-convert');
 
-Route::get('/merge-words-online', function()	{return view('tools/merge-words-online');	})->name('merge-words');
 
-Route::post('/merge-words-online/merge', 'MergewordsonlineController@merge')->name('merge-words-merge');
-
-Route::get('/keyword-density-checker', function()	
-	{
-		return view('tools/keyword-density-checker', ['data' => Commentform::orderBy('comment_id', 'desc')->where('comment_post_ID','=', 123)->where('comment_approved','=',1)->take(50)->get()]);	
-})->name('keyword-density');
+//keyword density cheker tool
+Route::get('/keyword-density-checker', 'WordCounterController@dencityindex')->name('keyword-density');
 
 
 
 
-
-// Route::post('/keyword-density-checker/check', 'KeyworddensityController@check')->name('keyword-density-checker');
-
+//COMMENT FORM
 Route::post('/comment-form', 'CommentformController@submitComment')->name('comment-form');
 
+// EMAIL SUBSCRIPTION
+Route::post('/email-subscribe', 'EmailsubscribeController@subscribe')->name('email-subscribe');
 
-Route::get('/test', function()
-	{
-		return view('/test');
-	});
-
+/***
+**  ADMIN AREA
+**/
 
 Auth::routes();
-
- // Route::get('/admin', [App\Http\Controllers\HomeController::class, 'index'])->name('admin');
-
-
 
 Route::middleware(['auth'])->prefix('admin')->group(function() 
 { 
 	Route::get('/', 'Dashboard\DashboardIndexController@index')->name('admin');
-	 // Route::get('/users', function(){return 'usechjfhdrs';}); 
+	
 	Route::get('/comments', function(){return 'comments';}); 
 
 

@@ -17,6 +17,17 @@ class WordCounterController extends Controller
 	protected $reading_time;
 	protected $speaking_time;
 
+	public function dencityindex()
+	{
+		$tool = Tool::where('id',9)->first();
+		$comments = $tool->comments->where('status', 'active')->sortByDesc('id');
+
+		return view('tools/keyword-density-checker', compact('tool', 'comments'));
+
+	}
+
+
+
 
 	public function index()
 	{
