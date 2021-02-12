@@ -14,7 +14,7 @@ class Md5generatorController extends Controller
     {
         $tool = Tool::where('id', 5)->first();
 
-        $comments = $tool->comments->where('status', 'active');
+        $comments = $tool->comments->where('status', 'active')->sortByDesc('id');
 
 
         return view('tools/online-md5-generator', compact('tool', 'comments'));

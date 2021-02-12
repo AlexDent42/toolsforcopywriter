@@ -16,7 +16,7 @@ class ReversetextgenController extends Controller
    {
 
       $tool = Tool::where('id',7)->first();
-      $comments = $tool->comments->where('status','active');
+      $comments = $tool->comments->where('status','active')->sortByDesc('id');
 
 
 

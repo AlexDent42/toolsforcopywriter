@@ -13,9 +13,8 @@ class PassgenController extends Controller
 	public function index()
 	{
 		
-		// $comment = Comment::orderBy('id', 'desc')->where('comment_post_ID','=', 129)->where('comment_approved','=',1)->take(50)->get();
 		$tool = Tool::where('id',2)->first();
-		$comments = $tool->comments->where('status','active');
+		$comments = $tool->comments->where('status','active')->sortByDesc('id');
 
 		return view('tools/passwords-generator', compact('tool', 'comments'));
 

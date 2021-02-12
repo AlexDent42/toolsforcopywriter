@@ -2,28 +2,9 @@
 @extends('layouts.app')
 
 
-@section('title')
-Keyword Density Checker | ToolsforCopywriter.com
-@endsection
-
-@section('description')
-Enter text and Keyword Density Checker will analyze the density of your text just as a search engine would do.
-@endsection
-
-@section('keywords')
-Keyword Density Checker
-@endsection
-
-@section('main-title')
-Keyword Density Checker
-@endsection
-
+@include('includes.head')
 @section('current-url')
 {{route('keyword-density')}}
-@endsection
-
-@section('comment_post_ID')
-123
 @endsection
 
 
@@ -105,37 +86,33 @@ Keyword Density Checker
                                 </div>
                                  <div class="blog-post-info">
                                     
-                                    <h3 class="post-name ver2">Keyword density tool</h3>
+                                   
                                 </div>
                                 <div class="post-content">
                                     <div class="row">
                                         
                                     </div>
-                                    <div class="post-text">
-                                    	<p>When you enter a text or you copy paste content into the text input field, this tool will extract the total number of keywords found inside the body of the text. After extracting all the words it will automatically calculate the frequency </p>
-
-                                       
-                                  
-                                      
-                                    </div>
+                                   
                                     <div class="blog-post-info">
                                     
-                                    <h3 class="post-name ver2">What is the best keyword density?</h3>
-                                </div>
-                                     <div class="post-text">
-                                    	<p>There is no exact answer to this question, because it all depends on the topic your writing about. Some topics ideal for long content forms and a lot of related keywords and synonyms. On the other hand you have the topics that are best served with a compact piece of content and a higher repetition of the same keywords. The best advice on this topic is writing natural and for human users</p>
-
                                    
-                                    </div>
+                                </div>
+                                     
                                     <div class="blog-post-info">
                                     
-                                    <h3 class="post-name ver2">What is keyword density?</h3>
-                                </div>
-                                     <div class="post-text">
-                                    	<p>Keyword density is the percentage calculated based on the number of times a keyword occurs inside the content of webpage divided by the total word count. Keyword density / keyword frequency is still a pretty strong indicator to determine the main focus keywords and keyword phrases for a specific webpage.</p>
-
                                    
+                                </div>
+                                     {{-- TOOL TEXT HERE --}}
+                                    <div class="post-content">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    {{ $tool->text }}
+                                                </div>
+                                            </div>
+                                            <div class="post-text">
+                                            </div>
                                     </div>
+                                    {{-- ENT TOOL TEXT --}}
 
                                     
                                 </div>

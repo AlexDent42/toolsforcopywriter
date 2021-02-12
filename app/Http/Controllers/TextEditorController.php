@@ -12,7 +12,7 @@ class TextEditorController extends Controller
    {
 
    	$tool = Tool::where('id', 6)->first();
-   	$comments = $tool->comments->where('status', 'active');
+   	$comments = $tool->comments->where('status', 'active')->sortByDesc('id');
    return view('tools/online-text-editor', compact('tool', 'comments'));
    }
 }

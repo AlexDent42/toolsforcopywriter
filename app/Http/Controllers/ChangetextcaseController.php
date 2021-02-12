@@ -14,7 +14,7 @@ class ChangetextcaseController extends Controller
     {
         $tool = Tool::where('id',4)->first();
 
-        $comments = $tool->comments->where('status', 'active');
+        $comments = $tool->comments->where('status', 'active')->sortByDesc('id');
 
         
 

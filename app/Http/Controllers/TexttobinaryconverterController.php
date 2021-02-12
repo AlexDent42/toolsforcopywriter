@@ -14,7 +14,7 @@ class TexttobinaryconverterController extends Controller
   public function index()
   {
     $tool = Tool::where('id',8)->first();
-    $comments = $tool->comments->where('status','active');
+    $comments = $tool->comments->where('status','active')->sortByDesc('id');
 
 
 
