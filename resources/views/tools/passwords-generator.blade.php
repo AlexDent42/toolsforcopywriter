@@ -1,30 +1,13 @@
         
 @extends('layouts.app')
 
-
-@section('title')
-{{ $tool->title }}
-@endsection
-
-@section('description')
-{{ $tool->description }}
-@endsection
-
-@section('keywords')
-Online Password Generator
-@endsection
-
-@section('main-title')
-{{ $tool->title }}
-@endsection
+@include('includes.head')
 
 @section('current-url')
 {{route('passwords-generator')}}
 @endsection
 
-@section('comment_post_ID')
-{{ $tool->id }}
-@endsection
+
 
 
 @section('main-content')
@@ -242,19 +225,21 @@ Online Password Generator
                                 <div class="post-content">
                                     
                                     <div class="post-text">
-                                     <div class="row">
-                                        <div class="col-12">{{ $tool->text }}</div>
+                                     
                                     </div>
-                                       
-                                  
-                                      
-                                    </div>
-                                  
-                                   
-                                    
-
-                                    
                                 </div>
+                                {{-- TOOL TEXT HERE --}}
+                                    <div class="post-content">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    {{ $tool->text }}
+                                                </div>
+                                            </div>
+                                            <div class="post-text">
+                                            </div>
+                                    </div>
+                                    {{-- ENT TOOL TEXT --}}
+                                 
                                  @include('includes.comments')
                             </div>
                         </div>

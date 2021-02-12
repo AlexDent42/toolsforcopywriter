@@ -16,7 +16,7 @@ class ChangetextcaseController extends Controller
 
         $comments = $tool->comments->where('status', 'active');
 
-        // dd($comments);
+        
 
         return view('tools/change-text-case', compact('tool','comments'));
     }

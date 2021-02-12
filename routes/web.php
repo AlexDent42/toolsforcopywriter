@@ -29,7 +29,7 @@ Route::post('/email-subscribe', 'EmailsubscribeController@subscribe')->name('ema
 Route::post('word-counter/calc', 'WordCounterController@calculate')->name('word-counter-calc');
 
 
-Route::get('/online-md5-generator', function(){return view('tools/online-md5-generator', ['data' => Commentform::orderBy('comment_id', 'desc')->where('comment_post_ID','=', 127)->where('comment_approved','=',1)->take(50)->get()]);})->name('md5-generator');
+Route::get('/online-md5-generator', 'Md5generatorController@index')->name('md5-generator');
 
 Route::post('/online-md5-generator/generate', 'Md5generatorController@generate')->name('md5-generator-generate');
 

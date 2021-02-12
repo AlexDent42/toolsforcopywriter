@@ -1,30 +1,13 @@
 @extends('layouts.app')
 
 
-@section('title')
-Online MD5 generator | ToolsforCopywriter.com
-@endsection
-
-@section('description')
-This online tool allows you to generate the MD5 hash of any string. Generates MD5 Checksum for any given text string.⭐ToolsForCopywriter.com
-@endsection
-
-@section('keywords')
-generate the MD5 hash
-@endsection
-
-@section('main-title')
-Online md5 generator
-@endsection
+@include('includes.head')
 
 @section('current-url')
 {{route('md5-generator')}}
 @endsection
 
 
-@section('comment_post_ID')
-127
-@endsection
 
 
 
@@ -126,53 +109,18 @@ Online md5 generator
                                 <div class="post-metas ver2">
                                     
                                 </div>
-                                 <div class="blog-post-info">
-                                    
-                                    <h2 class="post-name ver2">What is MD5?</h2>
-                                </div>
-                                <div class="post-content">
-                                    <div class="row">
-                                        
+                                
+                                 {{-- TOOL TEXT HERE --}}
+                                    <div class="post-content">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    {{ $tool->text }}
+                                                </div>
+                                            </div>
+                                            <div class="post-text">
+                                            </div>
                                     </div>
-                                    <div class="post-text">
-                                    
-                                    
-                                            <p> MD5 is a message-digest algorithm. It's used to compute a hash value in cryptography. So what's an hash function then? Simply put, a hash function takes a block of data and returns a fixed-size bit string (hash value). The data used by hash functions is referred to as a "message", while the computed hash value is referred to as the "message digest".</p>
-                                            
-                                      
-
-                                      
-                                    </div>
-                                    <div class="blog-post-info">
-                                    
-                                    <h2 class="post-name ver2">How big is a MD5 hash value?</h2>
-                                		</div>
-                                     <div class="post-text">
-                                  
-										                                    	    <p>MD5 produces a 128-bit (16 bytes) hash value. It's usually represented as a hexadecimal number of 32 digits.</p>
-                                   
-                                    </div>
-                                    <div class="blog-post-info">
-                                    
-                                    	<h3 class="post-name ver2">How can I decrypt MD5?</h3>
-                                		</div>
-		                                     <div class="post-text">
-		                                    	<p>You can't! MD5 is NOT an encryption algorithm! A lot of people are under the impression that MD5 encrypts data. It does no such thing. All it does is compute a hash value for a given set of data.</p>
-
-                                   
-                                    </div>
-                                     <div class="blog-post-info">
-                                    
-                                    	<h3 class="post-name ver2">How can I decrypt MD5?</h3>
-                                		</div>
-		                                     <div class="post-text">
-		                                    	<p>You can't! MD5 is NOT an encryption algorithm! A lot of people are under the impression that MD5 encrypts data. It does no such thing. All it does is compute a hash value for a given set of data.</p>
-
-                                   
-                                    </div>
-
-                                    
-                                </div>
+                                    {{-- ENT TOOL TEXT --}}
                                  @include('includes.comments')
                             </div>
                         </div>

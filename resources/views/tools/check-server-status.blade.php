@@ -1,29 +1,13 @@
 @extends('layouts.app')
 
 
-@section('title')
-{{ $tool->title}}
-@endsection
-
-@section('description')
-{{ $tool->description }}
-@endsection
-
-@section('keywords')
-Check Server Status, IS THIS SITE DOWN, CHECK SERVER STATUS ONLINE
-@endsection
-
-@section('main-title')
-{{ $tool->title}}
-@endsection
+@include('includes.head')
 
 @section('current-url')
 /check-server-status
 @endsection
 
-@section('comment_post_ID')
-{{ $tool->id }}
-@endsection
+
 
 
 
@@ -144,25 +128,31 @@ Check Server Status, IS THIS SITE DOWN, CHECK SERVER STATUS ONLINE
                                     </div>
                                     
                                     
-                                <div class="post-metas ver2">
-                                    
-                                </div>
-                                 <div class="blog-post-info">
+                                    <div class="post-metas ver2">
+                                        
+                                    </div>
+                                <div class="blog-post-info">
                                     
                                     <h2 class="post-name ver2">About Server Status Checker</h2>
                                 </div>
                                 <div class="post-content">
                                        
-                                        <div class="post-text">
-                                        
-                                         <div class="row">
-                                            <div class="col-12">{{ $tool->text }}
+                                        <div class="post-text">                                     </div>
+                                </div>
+                                {{-- TOOL TEXT HERE --}}
+                                    <div class="post-content">
+                                         <div class="post-text"> 
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    {{ $tool->text }}
+                                                </div>
                                             </div>
                                         </div>
-                                                
-                                          
-                                        </div>
-                                </div>
+                                            <div class="post-text">
+                                            </div>
+                                    </div>
+                                    {{-- ENT TOOL TEXT --}}
+                                 
 
                                  
                                

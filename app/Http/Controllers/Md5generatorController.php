@@ -5,9 +5,22 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\Md5generatorRequest;
 use App\Models\Md5generator;
+use App\Models\Tool;
+use App\Models\Comment;
 
 class Md5generatorController extends Controller
 {
+    public function index()
+    {
+        $tool = Tool::where('id', 5)->first();
+
+        $comments = $tool->comments->where('status', 'active');
+
+
+        return view('tools/online-md5-generator', compact('tool', 'comments'));
+
+
+    }
     public function generate(Md5generatorRequest $request)
     {
     	$text = $request-> input('text');

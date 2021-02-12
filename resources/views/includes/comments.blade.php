@@ -13,7 +13,7 @@
                                 <div class="first-box">
                                     <div class="comment-author-meta">
                                         <strong>{{$comment->name}}</strong>
-                                        <div class="date">{{$comment->updated_at->format('Y/m')}}</div>
+                                        <div class="date">{{$comment->updated_at->format('Y/m/d')}}</div>
                                     </div>
                                     
                                 </div>

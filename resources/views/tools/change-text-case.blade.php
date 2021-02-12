@@ -2,29 +2,13 @@
 @extends('layouts.app')
 
 
-@section('title')
-{{$tool->title}}
-@endsection
-
-@section('description')
-{{ $tool->description }}
-@endsection
-
-@section('keywords')
-Change Text Case
-@endsection
-
-@section('main-title')
-{{ $tool->title }}
-@endsection
+@include('includes.head')
 
 @section('current-url')
 {{route('text-case')}}
 @endsection
 
-@section('comment_post_ID')
-{{ $tool->id }}
-@endsection
+
 
 
 

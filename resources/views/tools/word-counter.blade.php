@@ -1,30 +1,13 @@
 		
 @extends('layouts.app')
 
-
-@section('title')
-{{ $tool->title}}
-@endsection
-
-@section('description')
-{{ $tool->description }}
-@endsection
-
-@section('keywords')
-word counter, word count, character count
-@endsection
-
-@section('main-title')
-{{ $tool->title }}
-@endsection
+@include('includes.head')
 
 @section('current-url')
 {{route('word-counter')}}
 @endsection
 
-@section('comment_post_ID')
-{{ $tool->id }}
-@endsection
+
 
 
 
@@ -83,19 +66,20 @@ word counter, word count, character count
                                 <div class="post-metas ver2">
                                     
                                 </div>
+                                 {{-- TOOL TEXT HERE --}}
+                                    <div class="post-content">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    {{ $tool->text }}
+                                                </div>
+                                            </div>
+                                            <div class="post-text">
+                                            </div>
+                                    </div>
+                                    {{-- ENT TOOL TEXT --}}
                                  
                                 <div class="post-content">
-                                    <div class="row">
-                                        <div class="col-12">{{ $tool->text }}</div>
-                                    </div>
-                                    <div class="post-text">
-                                    
-                                      
-                                    </div>
-                                   
-                                     
-
-                                    
+                      
                                 </div>
                                  @include('includes.comments')
                             </div>
