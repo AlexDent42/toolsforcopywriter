@@ -3,11 +3,11 @@
 
 
 @section('title')
-Change Text Case | ToolsforCopywriter.com
+{{$tool->title}}
 @endsection
 
 @section('description')
-Change Text Case is a handy web application that enables you to change the text case of any given text. Simply copy and paste the text into the text area below and click the required text case.⭐ToolsForCopywriter.com
+{{ $tool->description }}
 @endsection
 
 @section('keywords')
@@ -15,7 +15,7 @@ Change Text Case
 @endsection
 
 @section('main-title')
-Change Text Case
+{{ $tool->title }}
 @endsection
 
 @section('current-url')
@@ -23,7 +23,7 @@ Change Text Case
 @endsection
 
 @section('comment_post_ID')
-124
+{{ $tool->id }}
 @endsection
 
 
@@ -125,34 +125,21 @@ Change Text Case
                                     <h3 class="post-name ver2">Change Text Case Tool</h3>
                                 </div>
                                 <div class="post-content">
-                                    <div class="row">
-                                        
-                                    </div>
-                                    <div class="post-text">
-                                    	<p>An important tool which allows you to effortlessly change any text to lower case, UPPER CASE or even Capitalize Each Word, which is great for titles. </p>
-
-                                       
+                                    
+                                   
                                   
-                                      
-                                    </div>
-                                    <div class="blog-post-info">
                                     
-                                    <h3 class="post-name ver2">Easy to use Change Text Case Tool</h3>
-                                </div>
-                                     <div class="post-text">
-                                    	<p>Just paste any text to quickly change case</p>
-
-                                   
+                                   {{-- TOOL TEXT HERE --}}
+                                    <div class="post-content">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    {{ $tool->text }}
+                                                </div>
+                                            </div>
+                                            <div class="post-text">
+                                            </div>
                                     </div>
-                                    <div class="blog-post-info">
-                                    
-                                    <h3 class="post-name ver2">Benefits of using the Change Text Case Tool</h3>
-                                </div>
-                                     <div class="post-text">
-                                    	<p>Many word editing software do not offer the case convert feature. The good news is that you can use our free tool to solve possible capitalization issues. </p>
-
-                                   
-                                    </div>
+                                    {{-- ENT TOOL TEXT --}}
 
                                     
                                 </div>

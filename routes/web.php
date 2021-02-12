@@ -34,7 +34,7 @@ Route::get('/online-md5-generator', function(){return view('tools/online-md5-gen
 Route::post('/online-md5-generator/generate', 'Md5generatorController@generate')->name('md5-generator-generate');
 
 
-Route::get('/change-text-case', function(){return view('tools/change-text-case', ['data' => Commentform::orderBy('comment_id', 'desc')->where('comment_post_ID','=', 124)->where('comment_approved','=',1)->take(50)->get()]);})->name('text-case');
+Route::get('/change-text-case', 'ChangetextcaseController@index')->name('text-case');
 
 Route::post('/change-text-case/change', 'ChangetextcaseController@change')->name('text-case-change');
 

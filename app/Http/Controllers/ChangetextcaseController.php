@@ -5,9 +5,21 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\ChangetextcaseRequest;
 use App\Models\Changetextcase;
+use App\Models\Tool;
+use App\Models\Comment;
 
 class ChangetextcaseController extends Controller
 {
+    public function index()
+    {
+        $tool = Tool::where('id',4)->first();
+
+        $comments = $tool->comments->where('status', 'active');
+
+        // dd($comments);
+
+        return view('tools/change-text-case', compact('tool','comments'));
+    }
 
 
 
