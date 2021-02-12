@@ -44,7 +44,7 @@ Route::get('/reverse-text-generator', 'ReversetextgenController@index')->name('r
 
 Route::post('/reverse-text-generator/generate', 'ReversetextgenController@generate')->name('reverse-generate');
 
-Route::get('/text-to-binary-converter', function()	{return view('tools/text-to-binary-converter', ['data' => Commentform::orderBy('comment_id', 'desc')->where('comment_post_ID','=', 131)->where('comment_approved','=',1)->take(50)->get()]);	})->name('text-binary');
+Route::get('/text-to-binary-converter', 'TexttobinaryconverterController@index')->name('text-binary');
 
 Route::post('/text-to-binary-converter/convert', 'TexttobinaryconverterController@convert')->name('text-binary-convert');
 

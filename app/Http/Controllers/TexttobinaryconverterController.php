@@ -5,9 +5,29 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\TexttobinRequest;
 use App\Models\Texttobinary;
+use App\Models\Tool;
+use App\Model\Comment;
 
 class TexttobinaryconverterController extends Controller
 {
+
+  public function index()
+  {
+    $tool = Tool::where('id',8)->first();
+    $comments = $tool->comments->where('status','active');
+
+
+
+   return view('tools/text-to-binary-converter', compact('tool', 'comments') );
+  }
+
+
+
+
+
+
+
+
   public function convert(TexttobinRequest $request)
   {
   	$text = $request->input('text');

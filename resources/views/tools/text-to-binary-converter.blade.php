@@ -2,30 +2,14 @@
 @extends('layouts.app')
 
 
-@section('title')
-Text to Binary Converter | ToolsforCopywriter.com
-@endsection
-
-@section('description')
-Our text to binary converter online is your best option to get your plain text converted to data that can be interpreted via electronic machines ⭐ToolsForCopywriter.com
-@endsection
-
-@section('keywords')
-Text to Binary Converter
-@endsection
-
-@section('main-title')
-Text to Binary Converter
-@endsection
+@include('includes.head')
 
 @section('current-url')
 {{route('text-binary')}}
 @endsection
 
 
-@section('comment_post_ID')
-131
-@endsection
+
 
 @section('main-content')
 
@@ -117,48 +101,35 @@ Text to Binary Converter
                                 </div>
                                  <div class="blog-post-info">
                                     
-                                    <h3 class="post-name ver2">How to Convert Binary to Text </h3>
+                                   
                                 </div>
                                 <div class="post-content">
                                     <div class="row">
                                         
                                     </div>
-                                    <div class="post-text">
-                                    	<p>Looking for a binary to text converter?  You can use the one found here, or become your own binary to text translator.</p>
-
-                                       
                                   
-                                      
-                                    </div>
                                     <div class="blog-post-info">
                                     
-                                    <h3 class="post-name ver2">How to use Binary to text translator tool?</h3>
+                                   
                                 </div>
-                                     <div class="post-text">
-                                    	<p>As mentioned above, To use the binary to text tool, enter a binary number into the box, click on the binary translator button and get the equivalent text into the output. For example, insert “01000011 01101111 01101110 01110110 01100101 01110010 01110100” into the box and click on the binary to text button, you will get the text string “Convert”. </p>
-                                    	<p>If you want to convert text to binary, then enter any text into the text box and click on the button “Text to binary”. You will get the equivalent binary value with our binary translator.</p>
-
-                                   
+                                      {{-- TOOL TEXT HERE --}}
+                                    <div class="post-content">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    {{ $tool->text }}
+                                                </div>
+                                            </div>
+                                            <div class="post-text">
+                                            </div>
                                     </div>
-                                    <div class="blog-post-info">
-                                    
-                                    <h3 class="post-name ver2">What is "Binary"?</h3>
-                                		</div>
-                                     <div class="post-text">
-                                    	<p>Binary is just a number system that uses only two digits, o and 1 to rectify different queries. This number system one of the most popular systems in modern computer processing, electronics, wireless networking systems, data process over a network layer. A computer system can only understand the binary numbers and for that reason, it has become one of the most popular terms in the digital world. You can use this binary translator for the binary to text conversion.</p>
-
-                                   
-                                    </div>
+                                    {{-- ENT TOOL TEXT --}}
+                                  
 
                                     <div class="blog-post-info">
                                     
-                                    <h3 class="post-name ver2">Convert 01000001 01001110 binary code to Text</h3>
+                                  
                                 		</div>
-                                     <div class="post-text">
-                                    	<p>The binary to text code conversion of 01000001 01001110 is AN. As mentioned above, take the first eight characters of the given number. So, the first eight characters of this number are 01000001. The binary to text conversion of this number is "A". Once you have converted this number, convert another number. The second set for conversion would be 01001110. Again, this is the same number and conversion would be "N". So, the final binary to text conversion of "01000001 01001110" would be "AN".</p>
-
-                                   
-                                    </div>
+                                    
 
                                     
                                 </div>
