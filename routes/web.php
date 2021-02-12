@@ -38,7 +38,7 @@ Route::get('/change-text-case', 'ChangetextcaseController@index')->name('text-ca
 
 Route::post('/change-text-case/change', 'ChangetextcaseController@change')->name('text-case-change');
 
-Route::get('/online-text-editor', function(){return view('tools/online-text-editor');})->name('text-editor');
+Route::get('/online-text-editor', 'TextEditorController@index')->name('text-editor');
 
 Route::get('/reverse-text-generator', function()	{return view('tools/reverse-text-generator', ['data' => Commentform::orderBy('comment_id', 'desc')->where('comment_post_ID','=', 130)->where('comment_approved','=',1)->take(50)->get()]);	})->name('reverse-text');
 

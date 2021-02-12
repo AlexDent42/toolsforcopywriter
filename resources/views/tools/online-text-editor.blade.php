@@ -1,30 +1,13 @@
 		
 @extends('layouts.app')
 
-
-@section('title')
-Online Text Editor | ToolsforCopywriter.com
-@endsection
-
-@section('description')
-To edit text online use our online text editor to edit plain text.⭐ToolsForCopywriter.com
-@endsection
-
-@section('keywords')
-Online Text Editor
-@endsection
-
-@section('main-title')
-Online Text Editor
-@endsection
+@include('includes.head')
 
 @section('current-url')
 {{route('text-editor')}}
 @endsection
 
-@section('comment_post_ID')
-128
-@endsection
+
 
 
 @section('main-content')
@@ -71,37 +54,29 @@ Online Text Editor
                                     </div>
 
 
-                                <div class="post-metas ver2">
-                                    
-                                </div>
-                                 <div class="blog-post-info">
-                                    
-                                    <h3 class="post-name ver2">Text Editing – Online Editor</h3>
-                                </div>
+                                
+                                
                                 <div class="post-content">
                                     <div class="row">
                                         
                                     </div>
                                     <div class="post-text">
-                                    	<p>With the innovation in technology, people are moving towards the online world. The online text editor is the part of the modern invention that is making it easier for people to edit their text files without any hassle. The online text editing tool on Toolsforcopywriters is a complete package as it comes with advanced text editing features. You can use this to edit any text file in a couple of minutes. </p>
-
-                                       
-                                  
-                                      
+                                    	
                                     </div>
-                                    <div class="blog-post-info">
-                                    
-                                    <h3 class="post-name ver2">Who Can Use This Online Text Editor ?</h3>
-                                </div>
-                                     <div class="post-text">
-                                    	<h5>Teachers</h5>
-                                            <p>The plain text editor allows teachers to create notes, exam papers, and other resources for students without downloading any application.</p>
-                                            <h5>Students</h5>
-                                            <p>This is a perfect tool for students as they can easily prepare assignments and edit essays as their teachers want them to. This process can be done on mobile devices as well as desktops and laptops due to the compatibility of this tool with all kinds of devices.</p>
-                                             <h5>Social Media Experts</h5>
-                                            <p>The social media experts can edit the content on this tool for uploading it on their social media account without facing any hurdles.</p>
-
                                    
+                                     <div class="post-text">
+                                        {{-- TOOL TEXT HERE --}}
+                                    <div class="post-content">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    {{ $tool->text }}
+                                                </div>
+                                            </div>
+                                            <div class="post-text">
+                                            </div>
+                                    </div>
+                                    {{-- ENT TOOL TEXT --}}
+                                    	
                                     </div>
                                     
 
