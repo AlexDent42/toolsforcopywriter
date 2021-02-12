@@ -31,6 +31,7 @@
         <li class="nav-item px-3"><a class="nav-link" href="{{ route('admin') }}">Dashboard</a></li>
         <li class="nav-item px-3"><a class="nav-link" href="{{ route('users.index') }}">Users</a></li>
         <li class="nav-item px-3"><a class="nav-link" href="{{ route('comments.index') }}">Comments</a></li>
+         <li class="nav-item px-3"><a class="nav-link" href="{{ route('tools.index') }}">Tools</a></li>
       </ul>
       <ul class="nav navbar-nav ml-auto">
         {{-- <li class="nav-item d-md-down-none"><a class="nav-link" href="#"><i class="icon-bell"></i><span class="badge badge-pill badge-danger">5</span></a></li>
@@ -56,6 +57,7 @@
             <li class="nav-item"><a class="nav-link" href="{{ route('admin') }}"><i class="nav-icon la la-lg la-bullseye"></i> Dashboard</a></li>
             <li class="nav-item"><a class="nav-link" href="{{ route('users.index') }}"><i class="nav-icon la la-lg la-pencil"></i> Users</a></li>
              <li class="nav-item"><a class="nav-link" href="{{ route('comments.index') }}"><i class="nav-icon la la-lg la-pencil"></i> Comments</a></li>
+              <li class="nav-item"><a class="nav-link" href="{{ route('tools.index') }}"><i class="nav-icon la la-lg la-pencil"></i> Tools</a></li>
            
               </ul>
             </li>

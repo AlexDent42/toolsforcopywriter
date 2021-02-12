@@ -70,6 +70,8 @@ Route::middleware(['auth'])->prefix('admin')->group(function()
 	 Route::resource('/users', Dashboard\UsersController::class);
 
 	Route::resource('/comments', Dashboard\CommentController::class);
+
+	Route::resource('/tools', Dashboard\ToolController::class);
 }); 
 
 
