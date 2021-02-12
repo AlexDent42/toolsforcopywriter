@@ -75,7 +75,7 @@ class ToolController extends Controller
 
 
 
-        $tool->update($request->only(['title', 'description']));
+        $tool->update($request->only(['title', 'description', 'text']));
         return redirect()->back();
     }
 

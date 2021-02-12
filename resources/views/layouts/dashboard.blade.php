@@ -20,6 +20,7 @@
 	    <link href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css" rel="stylesheet">
 	    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic" rel="stylesheet">
 	    <!-- Main styles for this application-->
+      <script src="https://cdn.ckeditor.com/ckeditor5/25.0.0/classic/ckeditor.js"></script>
 	    <link href="/css/dashboard/style.css" rel="stylesheet">
 	    <link href="https://backstrap.net/vendors/pace-progress/css/pace.min.css" rel="stylesheet">
   </head>
