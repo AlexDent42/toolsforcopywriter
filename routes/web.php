@@ -40,7 +40,7 @@ Route::post('/change-text-case/change', 'ChangetextcaseController@change')->name
 
 Route::get('/online-text-editor', 'TextEditorController@index')->name('text-editor');
 
-Route::get('/reverse-text-generator', function()	{return view('tools/reverse-text-generator', ['data' => Commentform::orderBy('comment_id', 'desc')->where('comment_post_ID','=', 130)->where('comment_approved','=',1)->take(50)->get()]);	})->name('reverse-text');
+Route::get('/reverse-text-generator', 'ReversetextgenController@index')->name('reverse-text');
 
 Route::post('/reverse-text-generator/generate', 'ReversetextgenController@generate')->name('reverse-generate');
 

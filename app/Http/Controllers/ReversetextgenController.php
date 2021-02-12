@@ -5,9 +5,24 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\ReversetextgenRequest;
 use App\Models\Reversetext;
+use App\Models\Tool;
+use App\Models\Comment;
 
 class ReversetextgenController extends Controller
 {
+
+
+   public function index()
+   {
+
+      $tool = Tool::where('id',7)->first();
+      $comments = $tool->comments->where('status','active');
+
+
+
+
+      return view('tools/reverse-text-generator', compact('tool', 'comments'));
+   }
    public function generate(ReversetextgenRequest $request)
    {
    	$text = $request-> input('text');
