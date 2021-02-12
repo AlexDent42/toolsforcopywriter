@@ -3,11 +3,11 @@
 
 
 @section('title')
-Free Word Counter - Count Words &amp; Correct Writing| ToolsforCopywriter.com
+{{ $tool->title}}
 @endsection
 
 @section('description')
-Copy and paste your text into the online editor to count its words and characters and check keyword density ⭐Free Word Counter - Count Words &amp; Correct Writing
+{{ $tool->description }}
 @endsection
 
 @section('keywords')
@@ -15,7 +15,7 @@ word counter, word count, character count
 @endsection
 
 @section('main-title')
-Free Word Counter
+{{ $tool->title }}
 @endsection
 
 @section('current-url')
@@ -23,7 +23,7 @@ Free Word Counter
 @endsection
 
 @section('comment_post_ID')
-132
+{{ $tool->id }}
 @endsection
 
 
@@ -83,40 +83,17 @@ Free Word Counter
                                 <div class="post-metas ver2">
                                     
                                 </div>
-                                 <div class="blog-post-info">
-                                    
-                                    <h3 class="post-name ver2">What is WordCounter?</h3>
-                                </div>
+                                 
                                 <div class="post-content">
                                     <div class="row">
-                                        
+                                        <div class="col-12">{{ $tool->text }}</div>
                                     </div>
                                     <div class="post-text">
-                                    	<p>Word Counter is an easy to use and free online tool for counting words, characters in real time. Count words, check grammar and improve your writing. Get started by typing directly into the text area above or pasting in your content from elsewhere. </p>
-
-                                       
-                                  
+                                    
                                       
                                     </div>
-                                    <div class="blog-post-info">
-                                    
-                                    <h3 class="post-name ver2">Why would you need an online word counter?</h3>
-                                </div>
-                                     <div class="post-text">
-                                    	<p>Online word counters are a perfect tool for anyone who needs to keep a count of their words and characters, but doesn’t use Microsoft Word. </p>
-
                                    
-                                    </div>
-                                    <div class="blog-post-info">
-                                    
-                                    <h3 class="post-name ver2">Whom is this word counting tool for?</h3>
-                                </div>
-                                     <div class="post-text">
-                                    	<p>Bloggers/Content Writers</p>
-                                    	<p>Teachers/Students</p>
-
-                                   
-                                    </div>
+                                     
 
                                     
                                 </div>

@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\WordcalcRequest;
 use App\Models\Wordcounter;
+use App\Models\Tool;
+use App\Models\Comment;
+
 
 class WordCounterController extends Controller
 {
@@ -13,6 +16,18 @@ class WordCounterController extends Controller
 	protected $withoutspaces;
 	protected $reading_time;
 	protected $speaking_time;
+
+
+	public function index()
+	{
+
+		$tool = Tool::where('id', '=', 3)->first();
+		 $comments = $tool->comments->where('status','active');
+
+		
+
+		return view('tools/word-counter', compact('comments', 'tool'));
+	}
 
 
   	public function calculate(WordcalcRequest $request)

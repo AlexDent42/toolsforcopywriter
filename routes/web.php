@@ -11,9 +11,7 @@ Route::get('/', function () {
 })->name('index');
 
 
-Route::get('/word-counter', function () {
-    return view('tools/word-counter', ['data' => Commentform::orderBy('comment_id', 'desc')->where('comment_post_ID','=', 132)->where('comment_approved','=',1)->take(50)->get()]);
-})->name('word-counter');
+Route::get('/word-counter', 'WordCounterController@index')->name('word-counter');
 
 
 Route::get('/passwords-generator', 'PassgenController@index')->name('passwords-generator');

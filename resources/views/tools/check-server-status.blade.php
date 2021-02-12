@@ -155,8 +155,10 @@ Check Server Status, IS THIS SITE DOWN, CHECK SERVER STATUS ONLINE
                                        
                                         <div class="post-text">
                                         
-                                        
-                                                <p> {{ $tool->text }}</p>
+                                         <div class="row">
+                                            <div class="col-12">{{ $tool->text }}
+                                            </div>
+                                        </div>
                                                 
                                           
                                         </div>

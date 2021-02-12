@@ -242,8 +242,9 @@ Online Password Generator
                                 <div class="post-content">
                                     
                                     <div class="post-text">
-                                    
-                                    	  <p>{{ $tool->text }}</p>
+                                     <div class="row">
+                                        <div class="col-12">{{ $tool->text }}</div>
+                                    </div>
                                        
                                   
                                       
