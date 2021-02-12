@@ -2,9 +2,9 @@
                 <h3 class="post-comments-title widget-title">Comments</h3>
                 <ul class="commentlist">
 
-                    @if(isset($data))
+                    @if(isset($comments))
 
-                	@foreach($data as $element)
+                	@foreach($comments as $comment)
                     
                     <li>
                         <div class="comment">
@@ -12,12 +12,12 @@
                             <div class="comment-box">
                                 <div class="first-box">
                                     <div class="comment-author-meta">
-                                        <strong>{{$element->first_name}}</strong>
-                                        <div class="date">{{$element->updated_at}}</div>
+                                        <strong>{{$comment->name}}</strong>
+                                        <div class="date">{{$comment->updated_at}}</div>
                                     </div>
                                     
                                 </div>
-                                <div class="comment-content">{{$element->comment}}
+                                <div class="comment-content">{{$comment->comment}}
                                 </div>
                             </div>
                         </div>
@@ -30,13 +30,13 @@
             <div class="post-reply">
                 <h3 class="post-title widget-title">Leave A Reply</h3>
                 <form action="{{route('comment-form')}}" class="comment-form" method="post">
-                	<input type="hidden" name="comment_post_ID" value="@yield('comment_post_ID')" id="comment_post_ID">
+                	<input type="hidden" name="tool_id" value="@yield('comment_post_ID')" id="comment_post_ID">
                 	@csrf
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-6 col-xs-12">
                                 <label>First Name *</label>
-                                <input type="text" name="first_name" class="form-control" value="">
+                                <input type="text" name="name" class="form-control" value="">
                             </div>
                             <div class="col-md-6 col-xs-12">
                                 <label>Email *</label>

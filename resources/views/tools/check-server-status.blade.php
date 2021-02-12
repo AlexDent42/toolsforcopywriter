@@ -152,9 +152,7 @@ Check Server Status, IS THIS SITE DOWN, CHECK SERVER STATUS ONLINE
                                     <h2 class="post-name ver2">About Server Status Checker</h2>
                                 </div>
                                 <div class="post-content">
-                                        <div class="row">
-                                            
-                                        </div>
+                                       
                                         <div class="post-text">
                                         
                                         
@@ -163,6 +161,8 @@ Check Server Status, IS THIS SITE DOWN, CHECK SERVER STATUS ONLINE
                                           
                                         </div>
                                 </div>
+
+                                 
                                
                             </div>
 

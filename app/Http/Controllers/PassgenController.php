@@ -4,9 +4,27 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Passgen;
+use App\Models\Comment;
+use App\Models\Tool;
 
 class PassgenController extends Controller
 {
+
+	public function index()
+	{
+		
+		// $comment = Comment::orderBy('id', 'desc')->where('comment_post_ID','=', 129)->where('comment_approved','=',1)->take(50)->get();
+		$tool = Tool::where('id',2)->first();
+		$comments = $tool->comments->where('status','active');
+
+		return view('tools/passwords-generator', compact('tool', 'comments'));
+
+
+
+
+
+	}
+
   public function generate(Request $request)
   {
   

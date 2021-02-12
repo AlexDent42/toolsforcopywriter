@@ -14,6 +14,13 @@ class Comment extends Model
     	'name',
     	'email',
     	'comment',
-    	'status'
+    	'status',
+        'tool_id'
     ];
+
+
+    public function tool()
+    {
+    	return $this->belongsTo(Tool::class);
+    }
 }

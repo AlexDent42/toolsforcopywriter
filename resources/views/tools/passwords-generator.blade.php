@@ -3,11 +3,11 @@
 
 
 @section('title')
-Online Password Generator - Create random passwords in a click| ToolsForCopywriter.com
+{{ $tool->title }}
 @endsection
 
 @section('description')
-Create a secure password using our generator tool. Mix letters, numbers and symbols for the ultimate in security. ⭐Free Online Password Generator
+{{ $tool->description }}
 @endsection
 
 @section('keywords')
@@ -15,7 +15,7 @@ Online Password Generator
 @endsection
 
 @section('main-title')
-Online Password Generator
+{{ $tool->title }}
 @endsection
 
 @section('current-url')
@@ -23,7 +23,7 @@ Online Password Generator
 @endsection
 
 @section('comment_post_ID')
-129
+{{ $tool->id }}
 @endsection
 
 
@@ -237,48 +237,20 @@ Online Password Generator
                                     </div>
 
 
-                                <div class="post-metas ver2">
-                                    
-                                </div>
-                                 <div class="blog-post-info">
-                                    
-                                    <h3 class="post-name ver2">Generate strong passwords</h3>
-                                </div>
+                               
+                                
                                 <div class="post-content">
-                                    <div class="row">
-                                        
-                                    </div>
+                                    
                                     <div class="post-text">
                                     
-                                    	  <blockquote>
-                                            <p> Over 80% of hacking-related breaches are due to weak or stolen passwords, 
-                                                 a recent report shows </p>
-                                            
-                                        </blockquote>
-	                                       <p>So if you want to safeguard your personal info and assets, creating secure passwords is a big first step. </p>
+                                    	  <p>{{ $tool->text }}</p>
                                        
                                   
                                       
                                     </div>
-                                    <div class="blog-post-info">
-                                    
-                                    <h3 class="post-name ver2">What is a password generator?</h3>
-                                </div>
-                                     <div class="post-text">
-                                    	<p>An online password generator is a tool that automatically generates a password based on guidelines that you set to create strong and unpredictable passwords for each of your accounts. </p>
-
+                                  
                                    
-                                    </div>
-                                    <div class="blog-post-info">
                                     
-                                    <h3 class="post-name ver2">What's a strong password anyway?</h3>
-                                </div>
-                                     <div class="post-text">
-                                    	<p>Long: The longer a password, the more secure it is. A strong password should be at least 12 characters long.</p>
-                                    	<p>Random: Strong passwords use a combination of letters, numbers, cases, and symbols to form an unpredictable string of characters that doesn't resemble words or names.</p>
-
-                                   
-                                    </div>
 
                                     
                                 </div>
