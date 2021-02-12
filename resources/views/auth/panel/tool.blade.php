@@ -15,7 +15,7 @@
                             <th>Article</th>
                           <th>Status</th>
                           <th>Edit</th>
-                          <th>Delete</th>
+                          
                         </tr>
                       </thead>
                       <tbody>
@@ -34,13 +34,7 @@
                              @endif
                           </td>
                           <td><button class="btn btn-block btn-link" type="button"><a href="{{ route('tools.edit', $tool) }}">Edit</a></button></td>
-                          <td>
-                            <form action="{{ route('tools.destroy', $tool) }}" method="POST">
-                              @csrf
-                              @method('DELETE')
-
-                              <button class="btn btn-block btn-link" type="submit">Delete</button>
-                            </form></td>
+                         
 
                         </tr>
 

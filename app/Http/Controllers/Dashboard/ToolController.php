@@ -15,7 +15,7 @@ class ToolController extends Controller
      */
     public function index()
     {
-       $tools = Tool::simplePaginate();
+       $tools = Tool::simplePaginate(5);
 
        return view('auth.panel.tool', compact('tools'));
     }
@@ -47,9 +47,9 @@ class ToolController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Tool $tool)
     {
-        //
+        return view('auth.panel.show-tool', compact('tool'));
     }
 
     /**
@@ -70,9 +70,13 @@ class ToolController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Tool $tool)
     {
-        //
+
+
+
+        $tool->update($request->only(['title', 'description']));
+        return redirect()->back();
     }
 
     /**

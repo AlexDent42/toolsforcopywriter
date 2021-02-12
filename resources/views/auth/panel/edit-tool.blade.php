@@ -32,13 +32,13 @@
                     	 <div class="form-group row">
                         <div class="col-sm-6">
                            <label>TITLE:</label>
-                          <input name="name" class="form-control" type="text" placeholder="User name" value="{{ $tool->title ?? ''}}">
+                          <input name="title" class="form-control" type="text" placeholder="User name" value="{{ $tool->title ?? ''}}">
                         </div>
                     	</div>
                     	 <div class="form-group row">
 		                        <div class="col-sm-6">
                                <label>DESCRIPTION:</label>
-		                          <input name="email" class="form-control" type="text" placeholder="email" value="{{ $tool->description ?? ''}}">
+		                          <input name="description" class="form-control" type="text" placeholder="email" value="{{ $tool->description ?? ''}}">
 		                        </div>
                       	 </div>
                         
@@ -46,7 +46,7 @@
                             <div class="col-sm-6">
                                <label>TEXT:</label>
                             
-                              <textarea class="form-control" id="textarea-input" name="comment" rows="9" placeholder="Content.."> {{ $tool->text ?? ''}}</textarea>
+                              <textarea class="form-control" id="textarea-input" name="text" rows="9" placeholder="Content.."> {{ $tool->text ?? ''}}</textarea>
 
 
                             </div>

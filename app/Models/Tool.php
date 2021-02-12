@@ -9,8 +9,17 @@ class Tool extends Model
 {
     use HasFactory;
 
+
+    protected $fillable = [
+    		'title',
+    		'description'
+    	];
+
     public function comments()
     {
     	return $this->hasMany(Comment::class);
+
+
+
     }
 }
