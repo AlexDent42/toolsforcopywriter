@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\CheckUrlRequest;
 use App\Models\Domains;
 use App\Models\Commentform;
+use App\Models\Tool;
 
 class ServerStatusController extends Controller
 {
@@ -22,11 +23,12 @@ class ServerStatusController extends Controller
 	{
 		$urls = Domains::orderBy('id', 'desc')->take(10)->get();
 		$data = Commentform::orderBy('comment_id', 'desc')->where('comment_post_ID','=', 129)->where('comment_approved','=',1)->take(50)->get();
+		$tool = Tool::where('id',1)->first();
 
 		
 
 
-		return view('tools/check-server-status', ['data'=>$data, 'urls' => $urls ]);
+		return view('tools/check-server-status', compact('urls', 'data', 'tool'));
 	}
 
 

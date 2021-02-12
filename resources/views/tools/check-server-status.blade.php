@@ -2,11 +2,11 @@
 
 
 @section('title')
-Check Server Status - Check If Website Is Down| ToolsforCopywriter.com
+{{ $tool->title}}
 @endsection
 
 @section('description')
-Check the status of your favorite website. Just enter the URL in the below HTTP server status checker tool⭐ToolsForCopywriter.com
+{{ $tool->description }}
 @endsection
 
 @section('keywords')
@@ -14,7 +14,7 @@ Check Server Status, IS THIS SITE DOWN, CHECK SERVER STATUS ONLINE
 @endsection
 
 @section('main-title')
-Check Server Status
+{{ $tool->title}}
 @endsection
 
 @section('current-url')
@@ -22,7 +22,7 @@ Check Server Status
 @endsection
 
 @section('comment_post_ID')
-125
+{{ $tool->id }}
 @endsection
 
 
@@ -152,51 +152,16 @@ Check Server Status
                                     <h2 class="post-name ver2">About Server Status Checker</h2>
                                 </div>
                                 <div class="post-content">
-                                    <div class="row">
-                                        
-                                    </div>
-                                    <div class="post-text">
-                                    
-                                    
-                                            <p> The server status checker tool allows you to see what response/status code the web server is returning when the user is requesting the page. It also enables you to check the website status i.e. is the site reachable or not.</p>
+                                        <div class="row">
                                             
-                                      
-
-                                      
-                                    </div>
-                                    <div class="blog-post-info">
-                                    
-                                    <h2 class="post-name ver2">HTTP Status codes</h2>
-                                </div>
-                                     <div class="post-text">
-                                  
-										                                    	    <p>200 status code: OK is good. It means that your server was able to return content for the URL you requested.</li>
-										                                <p>301 status code: Moved Permanently means that the requested URL has been moved permanently and all further inquiries should be directed to the new location.</li>
-										<p>302 status code: Found means the server has found a temporary redirection. This URL should be used again for the next time since it is only temporary.</li>
-										<p>307 status code: Temporary Redirect is similar to a 302 because it is a temporary redirect and the same URL should be used again for the next time.</li>
-										<p>400 status code: Bad Request simply means that the server did not understand what you were looking for.</li>
-										<p>401 status code: Unauthorized means that your server will not grant access to the content without authorization</li>
-										<p>403 status code: Forbidden means that the server will not show you the content, regardless of authentication.</li>
-										<p>404 status code: Not Found is a common, frustrating error, and might even be what you’re checking for with this Server Status tool. This error code lets you know that the file you were looking for is not found. Search engines need a 404 to know which URLs are valid and which aren’t.</li>
-										<p>410 status code: Gone is similar to 404. It lets you know that the URL you were looking for did exist, but is gone.</li>
-										<p>500 status code: Internal Server Error is another frustration that must be directed to your web host or system administrator. It means something is wrong with the server. </li>
-
-
-                                   
-                                    </div>
-                                    <div class="blog-post-info">
-                                    
-                                    <h3 class="post-name ver2">HTTP Status Codes and Errors Matter in SEO</h3>
-                                </div>
-                                     <div class="post-text">
-                                    	<p>1) 100 - 200 HTTP status codes signal that everything is working fine on your website.</p>
-                                    	<p>2) 400 response codes and 500 response codes can prevent search engine bots from crawling and indexing your website's important pages and signal search engines that your site is not a quality site, as a result, can lower your website rank..</p>
-
-                                   
-                                    </div>
-                                     
-
-                                    
+                                        </div>
+                                        <div class="post-text">
+                                        
+                                        
+                                                <p> {{ $tool->text }}</p>
+                                                
+                                          
+                                        </div>
                                 </div>
                                
                             </div>
