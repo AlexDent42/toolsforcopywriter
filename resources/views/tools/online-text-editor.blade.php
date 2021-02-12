@@ -12,11 +12,7 @@
 
 @section('main-content')
 
-<script type="text/javascript" src="http://js.nicedit.com/nicEdit-latest.js"></script> <script type="text/javascript">
-//<![CDATA[
-        bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
-  //]]>
-  </script>
+
 
 		<div class="main-container right-slidebar single-post v2">
             <div class="container">
@@ -35,18 +31,20 @@
                                             <div class="post-reply">
 
                                       
-                									 <div class="row">
-                                                        
-                										
-
-                										 
-                				
-                                                    </div>
+                									 
                                                      
                 								
-        									<textarea id="myInput" name="area2" style="width: 100%; height: 400px;padding: 20px; margin-top:25px;">
+        									<textarea class="editor" tabindex="4">
                                                 Edit plain text here
-                                            </textarea><br />
+
+
+
+
+
+
+                                                <br> <br> <br> <br> <br> <br>
+                                            </textarea>
+                                            <br/>
                                     
         								
         									 @include('includes.messages')
@@ -56,32 +54,25 @@
 
                                 
                                 
-                                <div class="post-content">
-                                    <div class="row">
-                                        
-                                    </div>
-                                    <div class="post-text">
-                                    	
-                                    </div>
+                              
                                    
-                                     <div class="post-text">
+                                   
+                                   
                                         {{-- TOOL TEXT HERE --}}
                                     <div class="post-content">
+                                         <div class="post-text"> 
                                             <div class="row">
                                                 <div class="col-12">
-                                                    {{ $tool->text }}
+                                                    {!! $tool->text !!}
                                                 </div>
                                             </div>
-                                            <div class="post-text">
                                             </div>
                                     </div>
                                     {{-- ENT TOOL TEXT --}}
-                                    	
-                                    </div>
-                                    
+                                   
 
                                     
-                                </div>
+                              
                               
                             </div>
                         </div>
@@ -113,6 +104,61 @@
                 </div>
             </div>
         </div>
+
+         <script src="/js/build/ckeditor.js"></script>
+                    <script>ClassicEditor
+                        .create( document.querySelector( '.editor' ), {
+                          
+                          toolbar: {
+                            items: [
+                              'heading',
+                              '|',
+                              'bold',
+                              'italic',
+                              'link',
+                              'bulletedList',
+                              'numberedList',
+                              '|',
+                              'indent',
+                              'outdent',
+                              '|',
+                              'imageUpload',
+                              'blockQuote',
+                              'insertTable',
+                              'mediaEmbed',
+                              'undo',
+                              'redo'
+                            ]
+                          },
+                          language: 'en',
+                          table: {
+                            contentToolbar: [
+                              'tableColumn',
+                              'tableRow',
+                              'mergeTableCells'
+                            ]
+                          },
+                          licenseKey: '',
+                          
+                        } )
+                        .then( editor => {
+                          window.editor = editor;
+                      
+                          
+                          
+                          
+                      
+                          
+                          
+                          
+                        } )
+                        .catch( error => {
+                          console.error( 'Oops, something went wrong!' );
+                          console.error( 'Please, report the following error on https://github.com/ckeditor/ckeditor5/issues with the build id and the error stack trace:' );
+                          console.warn( 'Build id: yw1io1xit88l-8o65j7c6blw0' );
+                          console.error( error );
+                        } );
+                    </script>
        
 
 @endsection

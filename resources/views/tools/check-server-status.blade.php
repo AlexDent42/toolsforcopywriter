@@ -128,23 +128,15 @@
                                     </div>
                                     
                                     
-                                    <div class="post-metas ver2">
-                                        
-                                    </div>
-                                <div class="blog-post-info">
                                     
-                                    <h2 class="post-name ver2">About Server Status Checker</h2>
-                                </div>
-                                <div class="post-content">
-                                       
-                                        <div class="post-text">                                     </div>
-                                </div>
+                               
+                                
                                 {{-- TOOL TEXT HERE --}}
                                     <div class="post-content">
                                          <div class="post-text"> 
                                             <div class="row">
                                                 <div class="col-12">
-                                                    {{ $tool->text }}
+                                                    {!! $tool->text !!}
                                                 </div>
                                             </div>
                                         </div>

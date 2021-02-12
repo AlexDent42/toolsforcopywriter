@@ -98,25 +98,17 @@
                                     </div>
 
 
-                                <div class="post-metas ver2">
+                              
+                              
                                     
-                                </div>
-                                 <div class="blog-post-info">
-                                    
-                                   
-                                </div>
-                                <div class="post-content">
-                                    <div class="row">
-                                        
-                                    </div>
                                     {{-- TOOL TEXT HERE --}}
-                                    <div class="post-content">
+                                     <div class="post-content">
+                                         <div class="post-text"> 
                                             <div class="row">
                                                 <div class="col-12">
-                                                    {{ $tool->text }}
+                                                    {!! $tool->text !!}
                                                 </div>
                                             </div>
-                                            <div class="post-text">
                                             </div>
                                     </div>
                                     {{-- ENT TOOL TEXT --}}
@@ -124,7 +116,7 @@
                                    
 
                                     
-                                </div>
+                               
                                  @include('includes.comments')
                             </div>
                         </div>

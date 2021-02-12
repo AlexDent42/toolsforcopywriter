@@ -35,20 +35,20 @@
                         </div>
                     	</div>
                     	 <div class="form-group row">
-                        <div class="col-sm-6">
+                        <div class="col-sm-12">
                            <label>TITLE:</label>
                           <input name="title" class="form-control" type="text" placeholder="User name" value="{{ $tool->title ?? ''}}">
                         </div>
                     	</div>
                     	 <div class="form-group row">
-		                        <div class="col-sm-6">
+		                        <div class="col-sm-12">
                                <label>DESCRIPTION:</label>
 		                          <input name="description" class="form-control" type="text" placeholder="email" value="{{ $tool->description ?? ''}}">
 		                        </div>
                       	 </div>
                         
                          <div class="form-group row">
-                            <div class="col-sm-6">
+                            <div class="col-sm-12">
                                <label>TEXT1:</label>
 
                                

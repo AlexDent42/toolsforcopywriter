@@ -101,32 +101,26 @@
                                     </div>
 
 
-                                <div class="post-metas ver2">
-                                    
-                                </div>
-                                 <div class="blog-post-info">
-                                    
-                                    <h3 class="post-name ver2">Change Text Case Tool</h3>
-                                </div>
-                                <div class="post-content">
+                               
+                               
                                     
                                    
                                   
                                     
                                    {{-- TOOL TEXT HERE --}}
                                     <div class="post-content">
+                                         <div class="post-text"> 
                                             <div class="row">
                                                 <div class="col-12">
-                                                    {{ $tool->text }}
+                                                    {!! $tool->text !!}
                                                 </div>
                                             </div>
-                                            <div class="post-text">
                                             </div>
                                     </div>
                                     {{-- ENT TOOL TEXT --}}
 
                                     
-                                </div>
+                              
                                  @include('includes.comments')
                             </div>
                         </div>
