@@ -6,9 +6,7 @@ use App\Http\Controllers\Dashboard\CommentController;
 use App\Models\Commentform;
 
 
-Route::get('/', function () {
-    return view('index');
-})->name('index');
+Route::get('/', 'HomeController@index')->name('index');
 
 /***
 **  TOOLS AREA

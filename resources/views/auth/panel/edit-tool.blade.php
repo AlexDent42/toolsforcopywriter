@@ -40,6 +40,12 @@
                           <input name="title" class="form-control" type="text" placeholder="Tool name" value="{{ $tool->title ?? ''}}">
                         </div>
                     	</div>
+                       <div class="form-group row">
+                            <div class="col-sm-12">
+                               <label>DESCRIPTION:</label>
+                              <input name="description_seo" class="form-control" type="text" value="{{ $tool->description_seo ?? ''}}">
+                            </div>
+                         </div>
                       <div class="form-group row">
                         <div class="col-sm-12">
                            <label>TITLE for SEO:</label>
@@ -48,10 +54,11 @@
                       </div>
                     	 <div class="form-group row">
 		                        <div class="col-sm-12">
-                               <label>DESCRIPTION:</label>
+                               <label>DESCRIPTION for SEO:</label>
 		                          <input name="description" class="form-control" type="text" placeholder="email" value="{{ $tool->description ?? ''}}">
 		                        </div>
                       	 </div>
+                         
                           <div class="form-group row">
                             <div class="col-sm-12">
                                <label>SLUG:</label>

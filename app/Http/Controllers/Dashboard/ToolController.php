@@ -73,11 +73,16 @@ class ToolController extends Controller
      */
     public function update(Request $request, Tool $tool)
     {
+        if(!empty($request->file('image')))
+        {
         Storage::delete($tool->image);
         $path = $request->file('image')->store('public/tool');
 
          $params = $request->all();
          $params['image']=$path;
+     }
+     else
+         $params = $request->all();
 
          
          $tool->update($params);

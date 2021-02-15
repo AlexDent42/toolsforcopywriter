@@ -13,6 +13,7 @@ class Tool extends Model
     protected $fillable = [
     		'title',
     		'description',
+            'description_seo',
     		'text',
             'title_seo',
             'slug',
