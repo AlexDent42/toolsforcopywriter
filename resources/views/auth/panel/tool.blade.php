@@ -13,7 +13,7 @@
                           <th>Title</th>
                            <th>Description</th>
                             <th>Article</th>
-                          <th>Status</th>
+                         
                           <th>Edit</th>
                           
                         </tr>
@@ -23,16 +23,9 @@
                         <tr>
                           <td>{{ $tool->id }}</td>
                           <td><a href="{{ route('tools.show', $tool) }}">{{ $tool->title }}</a></td>
-                          <td><a href="{{ route('tools.show', $tool) }}">{{ $tool->description }}</a></td>
-                        <td>{{ $tool->text }}</td>
-                          <td>
-                            @if($tool->status=='active')
-
-                            <span class="badge badge-success">Active</span>
-                            @else
-                             <span class="badge badge-warning">Pending</span>
-                             @endif
-                          </td>
+                          <td><a href="{{ route('tools.show', $tool) }}">{{ substr($tool->description, 0, 30).'...' }}</a></td>
+                        <td>{{ substr($tool->text, 0, 50).'...' }}</td>
+                         
                           <td><button class="btn btn-block btn-link" type="button"><a href="{{ route('tools.edit', $tool) }}">Edit</a></button></td>
                          
 

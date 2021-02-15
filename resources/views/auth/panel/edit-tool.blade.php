@@ -37,19 +37,31 @@
                     	 <div class="form-group row">
                         <div class="col-sm-12">
                            <label>TITLE:</label>
-                          <input name="title" class="form-control" type="text" placeholder="User name" value="{{ $tool->title ?? ''}}">
+                          <input name="title" class="form-control" type="text" placeholder="Tool name" value="{{ $tool->title ?? ''}}">
                         </div>
                     	</div>
+                      <div class="form-group row">
+                        <div class="col-sm-12">
+                           <label>TITLE for SEO:</label>
+                          <input name="title_seo" class="form-control" type="text" placeholder="SEO Tool name" value="{{ $tool->title_seo ?? ''}}">
+                        </div>
+                      </div>
                     	 <div class="form-group row">
 		                        <div class="col-sm-12">
                                <label>DESCRIPTION:</label>
 		                          <input name="description" class="form-control" type="text" placeholder="email" value="{{ $tool->description ?? ''}}">
 		                        </div>
                       	 </div>
+                          <div class="form-group row">
+                            <div class="col-sm-12">
+                               <label>SLUG:</label>
+                              <input name="slug" class="form-control" type="text" placeholder="slg" value="{{ $tool->slug ?? ''}}">
+                            </div>
+                         </div>
                         
                          <div class="form-group row">
                             <div class="col-sm-12">
-                               <label>TEXT1:</label>
+                               <label>TEXT:</label>
 
                                
                             
@@ -88,58 +100,58 @@
 
 
                 <script src="/js/build/ckeditor.js"></script>
-  <script>ClassicEditor
-      .create( document.querySelector( '.editor' ), {
-        
-        toolbar: {
-          items: [
-            'heading',
-            '|',
-            'bold',
-            'italic',
-            'link',
-            'bulletedList',
-            'numberedList',
-            '|',
-            'indent',
-            'outdent',
-            '|',
-            'imageUpload',
-            'blockQuote',
-            'insertTable',
-            'mediaEmbed',
-            'undo',
-            'redo'
-          ]
-        },
-        language: 'en',
-        table: {
-          contentToolbar: [
-            'tableColumn',
-            'tableRow',
-            'mergeTableCells'
-          ]
-        },
-        licenseKey: '',
-        
-      } )
-      .then( editor => {
-        window.editor = editor;
-    
-        
-        
-        
-    
-        
-        
-        
-      } )
-      .catch( error => {
-        console.error( 'Oops, something went wrong!' );
-        console.error( 'Please, report the following error on https://github.com/ckeditor/ckeditor5/issues with the build id and the error stack trace:' );
-        console.warn( 'Build id: yw1io1xit88l-8o65j7c6blw0' );
-        console.error( error );
-      } );
-  </script>
+                    <script>ClassicEditor
+                        .create( document.querySelector( '.editor' ), {
+                          
+                          toolbar: {
+                            items: [
+                              'heading',
+                              '|',
+                              'bold',
+                              'italic',
+                              'link',
+                              'bulletedList',
+                              'numberedList',
+                              '|',
+                              'indent',
+                              'outdent',
+                              '|',
+                              'imageUpload',
+                              'blockQuote',
+                              'insertTable',
+                              'mediaEmbed',
+                              'undo',
+                              'redo'
+                            ]
+                          },
+                          language: 'en',
+                          table: {
+                            contentToolbar: [
+                              'tableColumn',
+                              'tableRow',
+                              'mergeTableCells'
+                            ]
+                          },
+                          licenseKey: '',
+                          
+                        } )
+                        .then( editor => {
+                          window.editor = editor;
+                      
+                          
+                          
+                          
+                      
+                          
+                          
+                          
+                        } )
+                        .catch( error => {
+                          console.error( 'Oops, something went wrong!' );
+                          console.error( 'Please, report the following error on https://github.com/ckeditor/ckeditor5/issues with the build id and the error stack trace:' );
+                          console.warn( 'Build id: yw1io1xit88l-8o65j7c6blw0' );
+                          console.error( error );
+                        } );
+                    </script>
 
                 @endsection

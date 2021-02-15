@@ -13,7 +13,9 @@ class Tool extends Model
     protected $fillable = [
     		'title',
     		'description',
-    		'text'
+    		'text',
+            'title_seo',
+            'slug'
     	];
 
     public function comments()
