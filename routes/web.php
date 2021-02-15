@@ -14,6 +14,7 @@ Route::get('/', function () {
 **  TOOLS AREA
 **/
 
+
 //words counter tool
 Route::get('/word-counter', 'WordCounterController@index')->name('word-counter');
 Route::post('word-counter/calc', 'WordCounterController@calculate')->name('word-counter-calc');

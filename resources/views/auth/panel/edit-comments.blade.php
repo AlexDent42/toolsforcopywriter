@@ -20,12 +20,11 @@
                      @endisset
                       <div class="form-group row">
                       	<div class="col-sm-6">
-                          <label>ID:</label>
-                          @if(isset($comment))
+                          <label>Tool ID:</label>
+                          
 
-                          <input class="form-control" type="text" placeholder="" name="id" value="{{ $comment->id ?? ''}}">
-                          @else
-                          @endif
+                          <input class="form-control" type="text" placeholder="" name="tool_id" value="{{ $comment->tool_id ?? ''}}">
+                        
 
                         </div>
                     	</div>
@@ -57,11 +56,17 @@
 	                        <label class="col-md-3 col-form-label">STATUS:</label>
 	                        <div class="col-md-9 col-form-label">
 	                          <div class="form-check">
-	                            <input class="form-check-input" id="radio1" type="radio" value="pending" name="status">
+	                            <input class="form-check-input" id="radio1" type="radio" value="pending" name="status" 
+                              @if(empty($comment) || $comment->status == 'pending')
+                              checked
+                              @endif>
 	                            <label class="form-check-label" for="radio1">Pending</label>
 	                          </div>
 	                          <div class="form-check">
-	                            <input class="form-check-input" id="radio2" type="radio" value="active" name="status">
+	                            <input class="form-check-input" id="radio2" type="radio" value="active" name="status"
+                              @if(isset($comment) && $comment->status == 'active')
+                              checked>
+                              @endif
 	                            <label class="form-check-label" for="radio2">Active</label>
 	                          </div>
 	                         

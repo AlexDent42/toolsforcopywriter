@@ -37,7 +37,7 @@ class CommentController extends Controller
      */
     public function store(Request $request)
     {
-       Comment::create($request->only(['name','email','comment','status']));
+       Comment::create($request->only(['name','email','comment','status', 'tool_id']));
        return redirect()->route('comments.index');
     }
 
@@ -72,7 +72,7 @@ class CommentController extends Controller
      */
     public function update(Request $request, Comment $comment)
     {
-        $comment->update($request->only(['name', 'email','comment', 'status']));
+        $comment->update($request->only(['name', 'email','comment', 'status','tool_id']));
         return redirect()->back();
     }
 

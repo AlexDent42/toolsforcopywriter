@@ -1,5 +1,5 @@
 @section('title')
-{{ $tool->title}}
+{{ $tool->title_seo}}
 @endsection
 
 @section('description')

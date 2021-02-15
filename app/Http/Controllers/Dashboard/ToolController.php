@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Tool;
+use Illuminate\Support\Facades\Storage;
 
 class ToolController extends Controller
 {
@@ -72,10 +73,14 @@ class ToolController extends Controller
      */
     public function update(Request $request, Tool $tool)
     {
+        Storage::delete($tool->image);
+        $path = $request->file('image')->store('public/tool');
 
+         $params = $request->all();
+         $params['image']=$path;
 
-
-        $tool->update($request->only(['title', 'description', 'text', 'title_seo', 'slug']));
+         
+         $tool->update($params);
         return redirect()->back();
     }
 

@@ -26,7 +26,7 @@
   </head>
   <body class="app aside-menu-fixed sidebar-lg-show">
     <header class="app-header bg-light border-0 navbar">
-      <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto ml-3" type="button" data-toggle="sidebar-show"><span class="navbar-toggler-icon"></span></button><a class="navbar-brand" href="#"><b>Back</b><span>strap</span></a>
+      <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto ml-3" type="button" data-toggle="sidebar-show"><span class="navbar-toggler-icon"></span></button><a class="navbar-brand" href="#"><b>Admin</b><span>panel</span></a>
       <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show"><span class="navbar-toggler-icon"></span></button>
       <ul class="nav navbar-nav d-md-down-none">
         <li class="nav-item px-3"><a class="nav-link" href="{{ route('admin') }}">Dashboard</a></li>
@@ -54,10 +54,10 @@
         <nav class="sidebar-nav">
           <ul class="nav">
            
-            <li class="nav-title">Theme</li>
+            <li class="nav-title">Overview</li>
             <li class="nav-item"><a class="nav-link" href="{{ route('admin') }}"><i class="nav-icon la la-lg la-bullseye"></i> Dashboard</a></li>
-            <li class="nav-item"><a class="nav-link" href="{{ route('users.index') }}"><i class="nav-icon la la-lg la-pencil"></i> Users</a></li>
-             <li class="nav-item"><a class="nav-link" href="{{ route('comments.index') }}"><i class="nav-icon la la-lg la-pencil"></i> Comments</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ route('users.index') }}"><i class="nav-icon la la-group la-lg mt-4"></i> Users</a></li>
+             <li class="nav-item"><a class="nav-link" href="{{ route('comments.index') }}"><i class="nav-icon la la-bullhorn la-lg"></i> Comments</a></li>
               <li class="nav-item"><a class="nav-link" href="{{ route('tools.index') }}"><i class="nav-icon la la-lg la-pencil"></i> Tools</a></li>
            
               </ul>
@@ -67,10 +67,10 @@
       </div>
       <main class="main">
         <!-- Breadcrumb-->
-        <ol class="breadcrumb">
+        {{-- <ol class="breadcrumb">
           <li class="breadcrumb-item">Home</li>
-          <li class="breadcrumb-item"><a href="#">Admin</a></li>
-          <li class="breadcrumb-item active">Dashboard</li>
+          <li class="breadcrumb-item"><a href="#">{{ url()->current() }}</a></li> --}}
+         {{--  <li class="breadcrumb-item active">Dashboard</li> --}}
           
         </ol>
         <div class="container-fluid">
@@ -227,8 +227,8 @@
       </aside>
     </div>
     <footer class="app-footer">
-      <div><a href="http://backstrap.net">BackStrap </a><span>&nbsp;&copy; 2019 Cristian Tabacitu.</span></div>
-      <div class="ml-auto"><span>Powered by </span><a href="https://coreui.io">CoreUI</a><span>&nbsp;&&nbsp;</span><a href="https://backpackforlaravel.com">Backpack for Laravel</a></div>
+      <div><a href="#">Tools for copywriters</a><span>&nbsp;&copy; 2021 Alex Kirpichonak</span></div>
+      <div class="ml-auto"><span>Powered by </span><a href="#">@alexdent42</a><span>&nbsp;&&nbsp;</span><a href="#">Backpack for Laravel</a></div>
     </footer>
     <!-- CoreUI and necessary plugins-->
     <script src="https://use.fontawesome.com/d4d6340577.js"></script>

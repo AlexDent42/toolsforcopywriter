@@ -18,7 +18,7 @@
 
 
 
-                    method="post">
+                    method="post" enctype="multipart/form-data">
                      @csrf
                      @isset($tool)
                      @method('PUT')
@@ -58,6 +58,20 @@
                               <input name="slug" class="form-control" type="text" placeholder="slg" value="{{ $tool->slug ?? ''}}">
                             </div>
                          </div>
+
+                         <div class="form-group row">
+                            <div class="col-sm-12">
+                              <img src="{{ Storage::url($tool->image) }}" alt="">
+                            </div></div>
+
+                         <div class="form-group row">
+                           <div class="col-sm-12">
+                       
+                       
+                          <input id="file-input" type="file" name="image">
+                        </div>
+                       
+                      </div>
                         
                          <div class="form-group row">
                             <div class="col-sm-12">

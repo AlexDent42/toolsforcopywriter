@@ -15,7 +15,8 @@ class Tool extends Model
     		'description',
     		'text',
             'title_seo',
-            'slug'
+            'slug',
+            'image'
     	];
 
     public function comments()
