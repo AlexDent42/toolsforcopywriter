@@ -62,7 +62,8 @@
                          <div class="form-group row">
                             <div class="col-sm-12">
                               <img src="{{ Storage::url($tool->image) }}" alt="">
-                            </div></div>
+                            </div>
+                          </div>
 
                          <div class="form-group row">
                            <div class="col-sm-12">

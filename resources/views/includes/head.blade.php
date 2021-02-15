@@ -14,6 +14,11 @@
 {{ $tool->title }}
 @endsection
 
+@section('image')
+@isset($tool->image)
+{{ Storage::url($tool->image) }}
+@endisset
+@endsection
 
 @section('comment_post_ID')
 {{ $tool->id }}

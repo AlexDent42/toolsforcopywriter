@@ -14,6 +14,35 @@
 </title>
     <meta name="description" content="@yield('description')" />
     <meta name="keywords" content="@yield('keywords')" />
+
+    <!--Open Graph and Twitter data-->
+       
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="@if(View::hasSection('title'))@yield('title')
+    @else Online Tools for Copywriter | toolsforcopywriter.com
+    @endif"/>
+<meta name="twitter:description" content="@if(View::hasSection('description'))@yield('description')
+    @else Get Online Tools for Copywriter for free -> toolsforcopywriter.com
+    @endif"/>
+
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <link rel="canonical" href="{{ url()->current() }}">
+     <meta property="og:title" content="@if(View::hasSection('title'))@yield('title')
+    @else Online Tools for Copywriter | toolsforcopywriter.com
+    @endif"/>
+<meta property="og:description" content="@if(View::hasSection('description'))@yield('description')
+    @else Get Online Tools for Copywriter for free -> toolsforcopywriter.com
+    @endif"/>
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ url()->current() }}" />
+    <meta property="og:image" content="@if(View::hasSection('image'))@yield('image')
+    @else 
+    @endif" />
+
+    <!--END OG and Twitter data-->
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
