@@ -26,11 +26,11 @@
                           <td><a href="{{ route('users.show', $user) }}">{{ $user->email }}</a></td>
                           <td>role</td>
                           <td>
-                            @if($user->status=='active')
+                            @if($user->is_admin===1)
 
-                            <span class="badge badge-success">Active</span>
+                            <span class="badge badge-success">Admin</span>
                             @else
-                             <span class="badge badge-warning">Pending</span>
+                             <span class="badge badge-warning">User</span>
                              @endif
                           </td>
                           <td><button class="btn btn-block btn-link" type="button"><a href="{{ route('users.edit', $user->id) }}">Edit</a></button></td>

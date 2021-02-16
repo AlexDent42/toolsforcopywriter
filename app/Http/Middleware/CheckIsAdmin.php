@@ -15,14 +15,15 @@ class CheckIsAdmin
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle(Request $request, Closure $next)
+   public function handle($request, Closure $next)
     {
-        if(!Auth::user()->isAdmin())
-        {
-            return redirect()->route('index');
-        }
-        
 
-        return $next($request);
+        if(Auth::user()->isAdmin()){
+            return $next($request);
+        }
+
+         return redirect()->route('index');
+
+       
     }
 }

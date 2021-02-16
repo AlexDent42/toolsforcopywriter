@@ -36,11 +36,11 @@
                         <div class="row">
                             <div class="col-md-6 col-xs-12">
                                 <label>First Name *</label>
-                                <input type="text" name="name" class="form-control" value="">
+                                <input type="text" name="name" class="form-control" value="{{ auth()->user()->name ?? '' }}">
                             </div>
                             <div class="col-md-6 col-xs-12">
                                 <label>Email *</label>
-                                <input type="text" name="email" class="form-control" value="">
+                                <input type="text" name="email" class="form-control" value="{{ auth()->user()->email ?? '' }}">
                             </div>
                         </div>
                     </div>

@@ -59,7 +59,7 @@ Route::post('/email-subscribe', 'EmailsubscribeController@subscribe')->name('ema
 
 Auth::routes();
 
-Route::middleware(['auth'])->prefix('admin')->group(function() 
+Route::middleware(['auth','isadmin'])->prefix('admin')->group(function() 
 { 
 	Route::get('/', 'Dashboard\DashboardIndexController@index')->name('admin');
 	

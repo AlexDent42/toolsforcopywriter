@@ -33,6 +33,11 @@
         <li class="nav-item px-3"><a class="nav-link" href="{{ route('users.index') }}">Users</a></li>
         <li class="nav-item px-3"><a class="nav-link" href="{{ route('comments.index') }}">Comments</a></li>
          <li class="nav-item px-3"><a class="nav-link" href="{{ route('tools.index') }}">Tools</a></li>
+         <li class="nav-item px-3"><a class="nav-link" href="{{ route('logout') }}"  onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        Exit</a> <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form></li>
       </ul>
       <ul class="nav navbar-nav ml-auto">
         {{-- <li class="nav-item d-md-down-none"><a class="nav-link" href="#"><i class="icon-bell"></i><span class="badge badge-pill badge-danger">5</span></a></li>
