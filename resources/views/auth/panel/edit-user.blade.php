@@ -60,19 +60,19 @@
 	                        <label class="col-md-3 col-form-label">STATUS:</label>
 	                        <div class="col-md-9 col-form-label">
 	                          <div class="form-check">
-	                            <input class="form-check-input" id="radio1" type="radio" value="1" name="is_admin"
+	                            <input class="form-check-input" id="radio1" type="radio" value="pending" name="status"
                             
-                              @if(empty($user) || $user->is_admin===1)
+                              @if(empty($user) || $user->status=='pending')
                                 checked
                                 @endif>
-	                            <label class="form-check-label" for="radio1">Admin</label>
+	                            <label class="form-check-label" for="radio1">Pending</label>
 	                          </div>
 	                          <div class="form-check">
-	                            <input class="form-check-input" id="radio2" type="radio" value="0" name="is_admin" 
-                              @if(isset($user) && $user->is_admin ===0)
+	                            <input class="form-check-input" id="radio2" type="radio" value="active" name="status" 
+                              @if(isset($user) && $user->status == 'active')
                               checked
                               @endif>
-	                            <label class="form-check-label" for="radio2">User</label>
+	                            <label class="form-check-label" for="radio2">Active</label>
 	                          </div>
 	                         
 	                          </div>

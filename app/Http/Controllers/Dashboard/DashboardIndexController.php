@@ -12,8 +12,6 @@ class DashboardIndexController extends Controller
 {
    public function index()
    {
-
-   	
    		
    		$users = User::orderByDesc('id')->take(5)->get();
    		$comments = Comment::orderByDesc('id')->take(10)->get();

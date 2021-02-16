@@ -74,7 +74,7 @@ class UsersController extends Controller
     public function update(Request $request, User $user)
     {
        // dd($request);
-         $user->update($request->only(['name','email', 'is_admin']));
+         $user->update($request->only(['name','email', 'status']));
          return redirect()->back();
     }
 

@@ -6,7 +6,7 @@ use App\Http\Controllers\Dashboard\CommentController;
 use App\Models\Commentform;
 
 
-Route::get('/', 'HomeController@index')->name('index');
+Route::get('/', 'IndexPageController@index')->name('index');
 
 /***
 **  TOOLS AREA
@@ -59,7 +59,7 @@ Route::post('/email-subscribe', 'EmailsubscribeController@subscribe')->name('ema
 
 Auth::routes();
 
-Route::middleware(['auth','isadmin'])->prefix('admin')->group(function() 
+Route::middleware(['auth', 'isadmin'])->prefix('admin')->group(function() 
 { 
 	Route::get('/', 'Dashboard\DashboardIndexController@index')->name('admin');
 	
